@@ -3,6 +3,8 @@ using EstadoCuenta.Data;
 using EstadoCuenta.Api.Interfaces;
 using EstadoCuenta.Api.UnitOfWork;
 using EstadoCuenta.Api.Repositories;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 
 
@@ -33,6 +35,10 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 // Configure AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
+// Configurar Health Checks en el proyecto API
+builder.Services.AddHealthChecks()
+    .AddDbContextCheck<EstadoCuentaContext>(name: "EstadoCuentaDB") // Health Check de la base de datos
+    .AddCheck("API Self-Check", () => HealthCheckResult.Healthy());
 
 var app = builder.Build();
 
@@ -56,5 +62,27 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Mapear el endpoint de Health Checks
+app.MapHealthChecks("/health", new HealthCheckOptions
+{
+    Predicate = _ => true,
+    ResponseWriter = async (context, report) =>
+    {
+        context.Response.ContentType = "application/json";
+        var response = new
+        {
+            status = report.Status.ToString(),
+            checks = report.Entries.Select(entry => new
+            {
+                name = entry.Key,
+                status = entry.Value.Status.ToString(),
+                exception = entry.Value.Exception?.Message,
+                duration = entry.Value.Duration.ToString()
+            })
+        };
+        await context.Response.WriteAsJsonAsync(response);
+    }
+});
 
 app.Run();
