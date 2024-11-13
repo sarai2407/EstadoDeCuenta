@@ -22,6 +22,10 @@ builder.Services.AddDbContext<EstadoCuentaContext>(options =>
 // Registrar UnitOfWork y repositorios
 #region
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<ITarjetaRepositorio, TarjetaRepositorio>();
+builder.Services.AddScoped<ITransaccionRepositorio, TransaccionRepositorio>();
+builder.Services.AddScoped<ITipoTransaccionRepositorio, TipoTransaccionRepositorio>();
+
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 #endregion
 

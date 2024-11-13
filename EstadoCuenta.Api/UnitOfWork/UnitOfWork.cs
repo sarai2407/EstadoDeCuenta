@@ -8,6 +8,9 @@ namespace EstadoCuenta.Api.UnitOfWork
     {
         private readonly EstadoCuentaContext _context;
         private IUsuarioRepositorio _usuarioRepositorio;
+        private ITarjetaRepositorio _tarjetaRepositorio;
+        private ITransaccionRepositorio _transaccionRepositorio;
+        private ITipoTransaccionRepositorio _tipotransaccionRepositorio;
 
         public UnitOfWork(EstadoCuentaContext context)
         {
@@ -15,6 +18,10 @@ namespace EstadoCuenta.Api.UnitOfWork
         }
 
         public IUsuarioRepositorio Usuarios => _usuarioRepositorio ??= new UsuarioRepositorio(_context);
+        public ITarjetaRepositorio Tarjetas => _tarjetaRepositorio ??= new TarjetaRepositorio(_context);
+        public ITransaccionRepositorio Transacciones => _transaccionRepositorio ??= new TransaccionRepositorio(_context);
+        public ITipoTransaccionRepositorio TipoTransacciones => _tipotransaccionRepositorio ??= new TipoTransaccionRepositorio(_context);
+
 
         public async Task<int> SaveAsync()
         {
