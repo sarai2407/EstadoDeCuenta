@@ -1,0 +1,14 @@
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\bin\Debug\net6.0\EstadoCuenta.Data.deps.json
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\bin\Debug\net6.0\EstadoCuenta.Data.runtimeconfig.json
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\bin\Debug\net6.0\EstadoCuenta.Data.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\bin\Debug\net6.0\EstadoCuenta.Data.pdb
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\obj\Debug\net6.0\EstadoCuenta.Data.csproj.AssemblyReference.cache
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\obj\Debug\net6.0\EstadoCuenta.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\obj\Debug\net6.0\EstadoCuenta.Data.AssemblyInfoInputs.cache
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\obj\Debug\net6.0\EstadoCuenta.Data.AssemblyInfo.cs
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\obj\Debug\net6.0\EstadoCuenta.Data.csproj.CoreCompileInputs.cache
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\obj\Debug\net6.0\EstadoCuenta.Data.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\obj\Debug\net6.0\refint\EstadoCuenta.Data.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\obj\Debug\net6.0\EstadoCuenta.Data.pdb
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\obj\Debug\net6.0\EstadoCuenta.Data.genruntimeconfig.cache
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Data\obj\Debug\net6.0\ref\EstadoCuenta.Data.dll

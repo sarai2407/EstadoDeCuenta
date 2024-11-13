@@ -20,4 +20,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EstadoCuenta.Api\EstadoCuenta.Api.csproj" />
+    <ProjectReference Include="..\EstadoCuenta.Data\EstadoCuenta.Data.csproj" />
+  </ItemGroup>
+
 </Project>

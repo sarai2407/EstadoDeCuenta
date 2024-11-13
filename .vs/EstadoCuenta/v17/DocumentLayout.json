@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F11F420A-7B71-4936-B7F9-B40F782E7EBA}|EstadoCuenta.Api\\EstadoCuenta.Api.csproj|c:\\users\\c00ki\\source\\repos\\estadocuenta\\estadocuenta.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F11F420A-7B71-4936-B7F9-B40F782E7EBA}|EstadoCuenta.Api\\EstadoCuenta.Api.csproj|solutionrelative:estadocuenta.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F11F420A-7B71-4936-B7F9-B40F782E7EBA}|EstadoCuenta.Api\\EstadoCuenta.Api.csproj|c:\\users\\c00ki\\source\\repos\\estadocuenta\\estadocuenta.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F11F420A-7B71-4936-B7F9-B40F782E7EBA}|EstadoCuenta.Api\\EstadoCuenta.Api.csproj|solutionrelative:estadocuenta.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|c:\\users\\c00ki\\source\\repos\\estadocuenta\\estadocuenta.data\\migrations\\20241113072816_initdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|solutionrelative:estadocuenta.data\\migrations\\20241113072816_initdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|c:\\users\\c00ki\\source\\repos\\estadocuenta\\estadocuenta.data\\models\\transaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|solutionrelative:estadocuenta.data\\models\\transaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|c:\\users\\c00ki\\source\\repos\\estadocuenta\\estadocuenta.data\\models\\tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|solutionrelative:estadocuenta.data\\models\\tarjeta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|c:\\users\\c00ki\\source\\repos\\estadocuenta\\estadocuenta.data\\models\\tipotransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|solutionrelative:estadocuenta.data\\models\\tipotransaccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|c:\\users\\c00ki\\source\\repos\\estadocuenta\\estadocuenta.data\\estadocuentacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|solutionrelative:estadocuenta.data\\estadocuentacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|c:\\users\\c00ki\\source\\repos\\estadocuenta\\estadocuenta.data\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8E16EA3-FADD-4BF6-8542-D926EC7A257A}|EstadoCuenta.Data\\EstadoCuenta.Data.csproj|solutionrelative:estadocuenta.data\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +63,110 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20241113072816_InitDb.cs",
+              "DocumentMoniker": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\Migrations\\20241113072816_InitDb.cs",
+              "RelativeDocumentMoniker": "EstadoCuenta.Data\\Migrations\\20241113072816_InitDb.cs",
+              "ToolTip": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\Migrations\\20241113072816_InitDb.cs",
+              "RelativeToolTip": "EstadoCuenta.Data\\Migrations\\20241113072816_InitDb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T07:28:17.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\Program.cs",
+              "RelativeDocumentMoniker": "EstadoCuenta.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\Program.cs",
+              "RelativeToolTip": "EstadoCuenta.Api\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T07:15:43.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "EstadoCuenta.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\appsettings.json",
+              "RelativeToolTip": "EstadoCuenta.Api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-13T07:14:03.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EstadoCuentaContext.cs",
+              "DocumentMoniker": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuentaContext.cs",
+              "RelativeDocumentMoniker": "EstadoCuenta.Data\\EstadoCuentaContext.cs",
+              "ToolTip": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuentaContext.cs",
+              "RelativeToolTip": "EstadoCuenta.Data\\EstadoCuentaContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T07:00:19.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Transaccion.cs",
+              "DocumentMoniker": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\Models\\Transaccion.cs",
+              "RelativeDocumentMoniker": "EstadoCuenta.Data\\Models\\Transaccion.cs",
+              "ToolTip": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\Models\\Transaccion.cs",
+              "RelativeToolTip": "EstadoCuenta.Data\\Models\\Transaccion.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T06:48:38.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TipoTransaccion.cs",
+              "DocumentMoniker": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\Models\\TipoTransaccion.cs",
+              "RelativeDocumentMoniker": "EstadoCuenta.Data\\Models\\TipoTransaccion.cs",
+              "ToolTip": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\Models\\TipoTransaccion.cs",
+              "RelativeToolTip": "EstadoCuenta.Data\\Models\\TipoTransaccion.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T06:47:32.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Tarjeta.cs",
+              "DocumentMoniker": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\Models\\Tarjeta.cs",
+              "RelativeDocumentMoniker": "EstadoCuenta.Data\\Models\\Tarjeta.cs",
+              "ToolTip": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\Models\\Tarjeta.cs",
+              "RelativeToolTip": "EstadoCuenta.Data\\Models\\Tarjeta.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAmwBcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T06:28:43.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "EstadoCuenta.Data\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\Models\\Usuario.cs",
+              "RelativeToolTip": "EstadoCuenta.Data\\Models\\Usuario.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T06:13:33.961Z",
+              "EditorCaption": ""
             }
           ]
         },

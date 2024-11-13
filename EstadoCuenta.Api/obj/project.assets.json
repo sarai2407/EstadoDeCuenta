@@ -2329,6 +2329,22 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "EstadoCuenta.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "6.2.2",
+          "FluentValidation.AspNetCore": "11.3.0",
+          "Microsoft.EntityFrameworkCore": "6.0.35",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.35"
+        },
+        "compile": {
+          "bin/placeholder/EstadoCuenta.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EstadoCuenta.Data.dll": {}
+        }
       }
     }
   },
@@ -7603,11 +7619,17 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "EstadoCuenta.Data/1.0.0": {
+      "type": "project",
+      "path": "../EstadoCuenta.Data/EstadoCuenta.Data.csproj",
+      "msbuildProject": "../EstadoCuenta.Data/EstadoCuenta.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper >= 6.2.2",
+      "EstadoCuenta.Data >= 1.0.0",
       "FluentValidation.AspNetCore >= 11.3.0",
       "Microsoft.EntityFrameworkCore >= 6.0.35",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.35",
@@ -7648,7 +7670,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj": {
+              "projectPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
