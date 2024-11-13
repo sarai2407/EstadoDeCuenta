@@ -6,7 +6,6 @@ CREATE PROCEDURE CrearTarjeta
     @IdUsuario INT
 AS
 BEGIN
-    SET NOCOUNT ON;
 
     INSERT INTO Tarjeta (NumTarjeta, LimiteCredito, Saldo, SaldoDisponible, IdUsuario)
     VALUES (@NumTarjeta, @LimiteCredito, @Saldo, @SaldoDisponible, @IdUsuario);

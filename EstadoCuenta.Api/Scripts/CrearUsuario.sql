@@ -7,7 +7,6 @@ CREATE PROCEDURE CrearUsuario
     @FechaRegistro DATETIME2(7)
 AS
 BEGIN
-    SET NOCOUNT ON;
 
     INSERT INTO Usuario (Nombre, Apellidos, Telefono, Email, Dui, FechaRegistro)
     VALUES (@Nombre, @Apellidos, @Telefono, @Email, @Dui, @FechaRegistro);

@@ -18,7 +18,7 @@ namespace EstadoCuenta.Data.Models
         public string Descripcion { get; set; }
 
         // Claves foráneas
-        int IdTipoTransaccion { get; set; }
+        public int IdTipoTransaccion { get; set; }
         [ForeignKey("IdTipoTransaccion")]
         public virtual TipoTransaccion TipoTransacciones { get; set; }
 

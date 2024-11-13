@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using EstadoCuenta.Data;
+using EstadoCuenta.Api.Interfaces;
+using EstadoCuenta.Api.UnitOfWork;
+using EstadoCuenta.Api.Repositories;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,8 +19,15 @@ builder.Services.AddDbContext<EstadoCuentaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+// Registrar UnitOfWork y repositorios
+#region
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+#endregion
+
+
 // Configure AutoMapper
-//builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(Program));
 
 
 var app = builder.Build();
