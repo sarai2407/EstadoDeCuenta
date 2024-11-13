@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using EstadoCuenta.Data;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,6 +14,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<EstadoCuentaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+
+// Configure AutoMapper
+//builder.Services.AddAutoMapper(typeof(Program));
+
 
 var app = builder.Build();
 
