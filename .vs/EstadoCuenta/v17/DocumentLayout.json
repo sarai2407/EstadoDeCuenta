@@ -94,8 +94,7 @@
               "RelativeToolTip": "EstadoCuentaMVC\\Mapping\\MappingProfile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T09:19:09.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T09:19:09.402Z"
             },
             {
               "$type": "Document",
@@ -107,8 +106,7 @@
               "RelativeToolTip": "EstadoCuentaMVC\\Views\\Usuario\\Usuarios.cshtml",
               "ViewState": "AQIAAAIAAAAAAAAAAAAAAC4AAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-15T09:15:13.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T09:15:13.702Z"
             },
             {
               "$type": "Document",
@@ -120,8 +118,7 @@
               "RelativeToolTip": "EstadoCuentaMVC\\Controllers\\UsuarioController.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAqwDsAAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T09:12:14.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T09:12:14.216Z"
             },
             {
               "$type": "Document",
@@ -133,8 +130,7 @@
               "RelativeToolTip": "EstadoCuentaMVC\\Models\\TarjetaViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T09:03:15.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T09:03:15.521Z"
             },
             {
               "$type": "Document",
@@ -146,8 +142,7 @@
               "RelativeToolTip": "EstadoCuenta.Api\\DTOs\\TarjetaDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T09:02:51.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T09:02:51.013Z"
             },
             {
               "$type": "Document",
@@ -159,8 +154,7 @@
               "RelativeToolTip": "EstadoCuentaMVC\\Models\\UsuarioViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:54:26.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:54:26.442Z"
             },
             {
               "$type": "Document",
@@ -172,8 +166,7 @@
               "RelativeToolTip": "EstadoCuenta.Api\\DTOs\\UsuarioDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:54:00.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:54:00.646Z"
             },
             {
               "$type": "Document",
@@ -185,8 +178,7 @@
               "RelativeToolTip": "EstadoCuenta.Api\\Repositories\\UsuarioRepositorio.cs",
               "ViewState": "AQIAADcAAAAAAAAAAADwv1wAAABbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:43:13.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:43:13.369Z"
             },
             {
               "$type": "Document",
@@ -198,8 +190,7 @@
               "RelativeToolTip": "EstadoCuenta.Api\\Controllers\\UsuarioController.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAcwDgAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T04:47:02.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T04:47:02.351Z"
             },
             {
               "$type": "Document",
@@ -211,8 +202,7 @@
               "RelativeToolTip": "EstadoCuenta.Api\\Controllers\\TransaccionController.cs",
               "ViewState": "AQIAADkAAAAAAAAAAAAowEIAAABsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T08:39:44.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T08:39:44.859Z"
             },
             {
               "$type": "Document",
@@ -224,8 +214,7 @@
               "RelativeToolTip": "EstadoCuentaMVC\\Views\\Tarjeta\\DetalleTarjeta.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-15T07:43:00.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T07:43:00.708Z"
             },
             {
               "$type": "Document",
@@ -235,7 +224,7 @@
               "RelativeDocumentMoniker": "EstadoCuentaMVC\\Controllers\\TarjetaController.cs",
               "ToolTip": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuentaMVC\\Controllers\\TarjetaController.cs",
               "RelativeToolTip": "EstadoCuentaMVC\\Controllers\\TarjetaController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAcwCEAAABcAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-15T06:57:08.868Z",
               "EditorCaption": ""
@@ -250,8 +239,7 @@
               "RelativeToolTip": "EstadoCuenta.Api\\Controllers\\TarjetaController.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAAwwEAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T06:43:03.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T06:43:03.663Z"
             }
           ]
         },
