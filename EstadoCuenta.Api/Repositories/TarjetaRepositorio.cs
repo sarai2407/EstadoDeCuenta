@@ -48,5 +48,26 @@ namespace EstadoCuenta.Api.Repositories
                 return -1; // Valor indicando que hubo un error
             }
         }
+
+        public async Task<Tarjeta?> GetTarjetaByNumeroAsync(string numTarjeta)
+        {
+            return await _context.Tarjetas
+                                 .FirstOrDefaultAsync(t => t.NumTarjeta == numTarjeta);
+        }
+
+        public async Task<bool> UpdateSaldoTarjetaAsync(string numTarjeta, decimal newSaldo)
+        {
+            var tarjeta = await _context.Tarjetas
+                                 .FirstOrDefaultAsync(t => t.NumTarjeta == numTarjeta);
+
+            if (tarjeta != null)
+            { 
+                tarjeta.Saldo = newSaldo;
+                tarjeta.SaldoDisponible = tarjeta.LimiteCredito - tarjeta.Saldo;
+                await _context.SaveChangesAsync();
+                return true; // Éxito en la actualización
+            }
+            return false; // No se encontró la tarjeta
+        }
     }
 }

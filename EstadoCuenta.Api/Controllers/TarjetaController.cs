@@ -34,5 +34,33 @@ namespace EstadoCuenta.Api.Controllers
 
             return BadRequest(new { message = "Error al crear la tarjeta" });
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetTarjetaNum(string NumTarjeta)
+        {
+            Tarjeta tarjeta =  await _unitOfWork.Tarjetas.GetTarjetaByNumeroAsync(NumTarjeta);
+
+            var result = _mapper.Map<TarjetaDto>(tarjeta);
+
+            if (result == null)
+            {
+                return NotFound(new { Message = "Tarjeta no encontrada" });
+            }
+            return Ok(result);
+        }
+
+        [HttpGet("GetTarjetaVariables")]
+        public async Task<IActionResult> GetTarjetaVariables(string NumTarjeta)
+        {
+            Tarjeta tarjeta = await _unitOfWork.Tarjetas.GetTarjetaByNumeroAsync(NumTarjeta);
+
+            var result = _mapper.Map<TarjetaVariablesDto>(tarjeta);
+
+            if (result == null)
+            {
+                return NotFound(new { Message = "Tarjeta no encontrada" });
+            }
+            return Ok(result);
+        }
     }
 }

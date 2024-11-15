@@ -29,7 +29,27 @@ namespace EstadoCuenta.Api.Controllers
 
             if (result > 0)
             {
-                return Ok(new { message = "Transacción creada exitosamente" });
+                decimal NuevoSaldo = 0;
+                var tarjeta = await _unitOfWork.Tarjetas.GetTarjetaByNumeroAsync(transaccionDto.NumTarjeta);
+                decimal saldoTarjeta = tarjeta.Saldo;
+
+                if (transaccionDto.IdTipoTransaccion == 1)
+                {
+                    NuevoSaldo = saldoTarjeta + transaccionDto.Monto;
+                }
+                else
+                {
+                    NuevoSaldo = saldoTarjeta - transaccionDto.Monto;
+                }
+
+                var updateSaldoExitoso = await _unitOfWork.Tarjetas.UpdateSaldoTarjetaAsync(transaccionDto.NumTarjeta, NuevoSaldo);
+
+                if (updateSaldoExitoso)
+                {
+                    return Ok(new { message = "Transacción creada y saldo actualizado exitosamente" });
+                }
+
+                return Ok(new { message = "Transacción creada pero hubo error al actualizar saldo" });
             }
 
             return BadRequest(new { message = "Error al crear la transacción" });

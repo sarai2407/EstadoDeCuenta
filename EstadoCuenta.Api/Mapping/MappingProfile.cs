@@ -18,6 +18,7 @@ namespace EstadoCuenta.Api.Mapping
             //tarjetas
             CreateMap<Tarjeta, TarjetaDto>();
             CreateMap<TarjetaDto, Tarjeta>();
+            CreateMap<Tarjeta, TarjetaVariablesDto>();
             //tipotransaccion
             CreateMap<TipoTransaccion, TipoTransaccionDto>();
             CreateMap<TipoTransaccionDto, TipoTransaccion>();

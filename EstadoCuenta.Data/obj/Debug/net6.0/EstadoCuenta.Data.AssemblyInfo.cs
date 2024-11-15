@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EstadoCuenta.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13257a3d13438beff22c48142d209bd8bc054f1b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8f9f241b9e523ce12256ccc152a0c297815d669")]
 [assembly: System.Reflection.AssemblyProductAttribute("EstadoCuenta.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EstadoCuenta.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
