@@ -50,6 +50,20 @@ namespace EstadoCuenta.Api.Controllers
             return NotFound(tarjeta.Errors.FirstOrDefault().Message);
         }
 
+        [HttpGet("GetTarjetaIdUser")]
+        public async Task<IActionResult> GetTarjetaIdUser(int idUser)
+        {
+            Result<Tarjeta> tarjeta = await _unitOfWork.Tarjetas.GetTarjetaIdUser(idUser);
+
+            if (tarjeta.IsSuccess)
+            {
+                var result = _mapper.Map<TarjetaDto>(tarjeta.Value);
+                return Ok(result);
+            }
+
+            return NotFound(tarjeta.Errors.FirstOrDefault().Message);
+        }
+
         [HttpGet("GetTarjetaVariables")]
         public async Task<IActionResult> GetTarjetaVariables(string NumTarjeta)
         {

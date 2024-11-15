@@ -16,6 +16,7 @@ C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Fluent
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Humanizer.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\System.Net.Http.Formatting.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -44,6 +45,8 @@ C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Micros
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll

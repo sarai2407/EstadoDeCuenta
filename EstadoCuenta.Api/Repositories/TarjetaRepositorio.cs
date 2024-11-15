@@ -56,12 +56,11 @@ namespace EstadoCuenta.Api.Repositories
             try
             {
                 // Filtra todas las transacciones por el número de tarjeta
-                Tarjeta tarjeta = await _context.Tarjetas
-                                 .FirstOrDefaultAsync(t => t.NumTarjeta == numTarjeta);
+                Tarjeta tarjeta = await _context.Tarjetas.FirstOrDefaultAsync(t => t.NumTarjeta == numTarjeta);
 
                 if (tarjeta == null)
                 {
-                    return Result.Fail("No se encontraron pagos para el número de tarjeta especificado.");
+                    return Result.Fail("No se encontroel número de tarjeta especificado.");
                 }
 
                 // Si no hay transacciones, retornamos una lista vacía
@@ -87,6 +86,28 @@ namespace EstadoCuenta.Api.Repositories
                 return true; // Éxito en la actualización
             }
             return false; // No se encontró la tarjeta
+        }
+
+        public async Task<Result<Tarjeta>> GetTarjetaIdUser(int idUser)
+        {
+            try
+            {
+                // Filtra todas las transacciones por el número de tarjeta
+                Tarjeta tarjeta = await _context.Tarjetas.FirstOrDefaultAsync(t => t.IdUsuario == idUser);
+
+                if (tarjeta == null)
+                {
+                    return Result.Fail("No se encontro la tarjeta asociada a ese usuario");
+                }
+
+                // Si no hay transacciones, retornamos una lista vacía
+                return Result.Ok(tarjeta);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail<Tarjeta>("Ocurrió un error al obtener la tarjeta.");
+            }
+
         }
     }
 }

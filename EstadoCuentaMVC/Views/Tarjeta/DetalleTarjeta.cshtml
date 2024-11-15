@@ -1,0 +1,134 @@
+﻿@model EstadoCuentaMVC.Models.TarjetaVariablesViewModel
+
+@{
+    ViewData["Title"] = "Detalles de la Tarjeta";
+}
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+
+    <!-- Mostrar mensaje de error si existe -->
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+
+    @if (Model != null)
+    {
+        <!-- Información de la tarjeta -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Id de Tarjeta</strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">@Model.IdTarjeta</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Numero de Tarjeta</strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">@Model.NumTarjeta</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Límite de Crédito</strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">@Model.LimiteCredito</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Saldo</strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">@Model.Saldo</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Saldo Disponible</strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">@Model.SaldoDisponible</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Interés Bonificable</strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">@Model.InteresBonificable</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Monto Total a Pagar</strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">@Model.MontoTotalaPagar</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Monto Total con Intereses</strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">@Model.MontoTotalConIntereses</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Cuota Mínima a Pagar</strong>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">@Model.CuotaMinimaaPagar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <!-- Si no hay datos en el modelo, mostrar un mensaje alternativo -->
+        <div class="alert alert-warning">
+            No se encontraron detalles para la tarjeta especificada.
+        </div>
+    }
+</div>
+

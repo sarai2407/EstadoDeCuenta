@@ -75,5 +75,24 @@ namespace EstadoCuenta.Api.Repositories
 
         }
 
+        public async Task<Result<List<Usuario>>> GetAllUsersAsync()
+        {
+            try
+            {
+                List<Usuario> usuarios = await _context.Usuarios.ToListAsync();
+
+                if (usuarios == null || !usuarios.Any())
+                {
+                    return Result.Fail<List<Usuario>>("No se encontraron usuarios.");
+                }
+                return Result.Ok(usuarios);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                return Result.Fail<List<Usuario>>("Ocurrió un error al obtener los usuarios.");
+            }
+        }
+
     }
 }

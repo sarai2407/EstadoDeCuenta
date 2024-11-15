@@ -50,7 +50,21 @@ namespace EstadoCuenta.Api.Controllers
                 return Ok(result);
             }
 
-            return NotFound(user.Errors.FirstOrDefault().Message);
+            return NotFound(user.Errors.FirstOrDefault()?.Message);
+        }
+
+        [HttpGet("GetUsers")]
+        public async Task<IActionResult> GetUsers()
+        {
+            Result<List<Usuario>> usuarios = await _unitOfWork.Usuarios.GetAllUsersAsync();
+            
+            if (usuarios.IsSuccess)
+            {
+                var result = _mapper.Map<List<UsuarioDto>>(usuarios.Value);
+                return Ok(result);
+            }
+
+            return NotFound(usuarios.Errors.FirstOrDefault()?.Message);
         }
     }
 }

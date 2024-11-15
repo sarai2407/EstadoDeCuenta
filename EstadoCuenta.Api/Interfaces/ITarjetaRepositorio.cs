@@ -8,5 +8,6 @@ namespace EstadoCuenta.Api.Interfaces
         Task<int> CrearTarjetaAsync(Tarjeta tarjeta);
         Task<Result<Tarjeta>> GetTarjetaByNumeroAsync(string numTarjeta);
         Task<bool> UpdateSaldoTarjetaAsync(string numTarjeta, decimal newSaldo);
+        Task<Result<Tarjeta>> GetTarjetaIdUser(int idUser);
     }
 }

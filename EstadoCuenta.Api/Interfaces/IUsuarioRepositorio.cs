@@ -8,5 +8,6 @@ namespace EstadoCuenta.Api.Interfaces
     {
         Task<int> CrearUsuarioAsync(Usuario usuario);
         Task<Result<Usuario>> GetUsuarioByIdAsync(int id);
+        Task<Result<List<Usuario>>> GetAllUsersAsync();
     }
 }

@@ -12,6 +12,16 @@ using EstadoCuenta.Api.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", policy =>
+    {
+        policy.AllowAnyOrigin()  // Permite cualquier origen
+              .AllowAnyMethod()  // Permite cualquier método HTTP (GET, POST, PUT, DELETE, etc.)
+              .AllowAnyHeader(); // Permite cualquier encabezado
+    });
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -25,12 +35,13 @@ builder.Services.AddDbContext<EstadoCuentaContext>(options =>
 
 // Registrar UnitOfWork y repositorios
 #region
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 builder.Services.AddScoped<ITarjetaRepositorio, TarjetaRepositorio>();
 builder.Services.AddScoped<ITransaccionRepositorio, TransaccionRepositorio>();
 builder.Services.AddScoped<ITipoTransaccionRepositorio, TipoTransaccionRepositorio>();
 
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 #endregion
 
 // Configure AutoMapper
@@ -54,6 +65,10 @@ using (var scope = app.Services.CreateScope())
 // Configure the HTTP request pipeline.
 
 // Usar el middleware global de excepciones
+
+// 2. Aplicar la política de CORS en el pipeline de la aplicación
+app.UseCors("AllowAllOrigins");  // Aplica la política "AllowAllOrigins"
+
 app.UseMiddleware<ExceptionMiddleware>();
 
 if (app.Environment.IsDevelopment())

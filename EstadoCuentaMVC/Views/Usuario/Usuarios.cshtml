@@ -1,0 +1,47 @@
+﻿@model List<EstadoCuentaMVC.Models.UsuarioViewModel>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<div class="container mt-5">
+    <h2>@ViewData["Title"]</h2>
+
+    @if (Model.Count > 0)
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var usuario in Model)
+                    {
+                        <tr>
+                            <td>@usuario.Nombre</td>
+                            <td>@usuario.Apellidos</td>
+                            <td>@usuario.Email</td>
+                            <td>@usuario.Telefono</td>
+                            <td>
+                                <form asp-action="DetalleidTarjeta" asp-controller="Usuario" method="get">
+                                    <input type="hidden" name="idUsuario" value="@usuario.IdUsuario" />
+                                    <button type="submit" class="btn btn-primary btn-sm">Ver Detalle</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <p>No hay usuarios registrados.</p>
+    }
+</div>
