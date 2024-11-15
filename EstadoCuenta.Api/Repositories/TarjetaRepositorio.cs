@@ -2,9 +2,11 @@
 using EstadoCuenta.Api.Interfaces;
 using EstadoCuenta.Data;
 using EstadoCuenta.Data.Models;
+using FluentResults;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
+using FluentResults;
 
 namespace EstadoCuenta.Api.Repositories
 {
@@ -49,10 +51,27 @@ namespace EstadoCuenta.Api.Repositories
             }
         }
 
-        public async Task<Tarjeta?> GetTarjetaByNumeroAsync(string numTarjeta)
+        public async Task<Result<Tarjeta>> GetTarjetaByNumeroAsync(string numTarjeta)
         {
-            return await _context.Tarjetas
+            try
+            {
+                // Filtra todas las transacciones por el número de tarjeta
+                Tarjeta tarjeta = await _context.Tarjetas
                                  .FirstOrDefaultAsync(t => t.NumTarjeta == numTarjeta);
+
+                if (tarjeta == null)
+                {
+                    return Result.Fail("No se encontraron pagos para el número de tarjeta especificado.");
+                }
+
+                // Si no hay transacciones, retornamos una lista vacía
+                return Result.Ok(tarjeta);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail<Tarjeta>("Ocurrió un error al obtener la tarjeta.");
+            }
+
         }
 
         public async Task<bool> UpdateSaldoTarjetaAsync(string numTarjeta, decimal newSaldo)

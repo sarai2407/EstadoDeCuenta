@@ -3,6 +3,7 @@ using EstadoCuenta.Api.DTOs;
 using EstadoCuenta.Api.Interfaces;
 using EstadoCuenta.Api.UnitOfWork;
 using EstadoCuenta.Data.Models;
+using FluentResults;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -36,6 +37,20 @@ namespace EstadoCuenta.Api.Controllers
             }
 
             return BadRequest(new { message = "Error al crear el usuario" });
+        }
+
+        [HttpGet("GetUser/{id}")]
+        public async Task<IActionResult> GetUser(int id)
+        {
+            Result<Usuario> user = await _unitOfWork.Usuarios.GetUsuarioByIdAsync(id);
+
+            if (user.IsSuccess)
+            {
+                var result = _mapper.Map<UsuarioDto>(user.Value);
+                return Ok(result);
+            }
+
+            return NotFound(user.Errors.FirstOrDefault().Message);
         }
     }
 }

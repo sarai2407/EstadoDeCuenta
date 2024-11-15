@@ -5,6 +5,8 @@ using EstadoCuenta.Api.UnitOfWork;
 using EstadoCuenta.Api.Repositories;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using EstadoCuenta.Api.Middleware;
+
 
 
 
@@ -31,7 +33,6 @@ builder.Services.AddScoped<ITipoTransaccionRepositorio, TipoTransaccionRepositor
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 #endregion
 
-
 // Configure AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
@@ -51,6 +52,10 @@ using (var scope = app.Services.CreateScope())
 */
 
 // Configure the HTTP request pipeline.
+
+// Usar el middleware global de excepciones
+app.UseMiddleware<ExceptionMiddleware>();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

@@ -2,6 +2,7 @@
 using EstadoCuenta.Api.DTOs;
 using EstadoCuenta.Api.Interfaces;
 using EstadoCuenta.Data.Models;
+using FluentResults;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,7 +21,7 @@ namespace EstadoCuenta.Api.Controllers
             _mapper = mapper;
         }
 
-        [HttpPost]
+        [HttpPost("CrearTransaccion")]
         public async Task<IActionResult> CrearTransaccion([FromBody]TransaccionDto transaccionDto)
         {
             var transaccion = _mapper.Map<Transaccion>(transaccionDto);
@@ -31,15 +32,20 @@ namespace EstadoCuenta.Api.Controllers
             {
                 decimal NuevoSaldo = 0;
                 var tarjeta = await _unitOfWork.Tarjetas.GetTarjetaByNumeroAsync(transaccionDto.NumTarjeta);
-                decimal saldoTarjeta = tarjeta.Saldo;
+                decimal saldoTarjeta = tarjeta.Value.Saldo;
 
-                if (transaccionDto.IdTipoTransaccion == 1)
+                switch (transaccionDto.IdTipoTransaccion)
                 {
-                    NuevoSaldo = saldoTarjeta + transaccionDto.Monto;
-                }
-                else
-                {
-                    NuevoSaldo = saldoTarjeta - transaccionDto.Monto;
+                    case 1:
+                        NuevoSaldo = saldoTarjeta + transaccionDto.Monto;
+                        break;
+
+                    case 2:
+                        NuevoSaldo = saldoTarjeta - transaccionDto.Monto;
+                        break;
+
+                    default:
+                        throw new ArgumentException("Tipo de transacción desconocido.");
                 }
 
                 var updateSaldoExitoso = await _unitOfWork.Tarjetas.UpdateSaldoTarjetaAsync(transaccionDto.NumTarjeta, NuevoSaldo);
@@ -53,6 +59,51 @@ namespace EstadoCuenta.Api.Controllers
             }
 
             return BadRequest(new { message = "Error al crear la transacción" });
+        }
+
+        [HttpGet("transacciones/{numTarjeta}")]
+        public async Task<IActionResult> GetTransaccionesByNumeroAsync(string numTarjeta)
+        {
+            Result<List<Transaccion>> result = await _unitOfWork.Transacciones.GetTransaccionesByNumeroAsync(numTarjeta);
+
+            if (result.IsSuccess)
+            {
+                var transaccion = _mapper.Map<List<TransaccionDto>>(result.Value);
+                return Ok(transaccion);
+            }
+
+            return NotFound(result.Errors.FirstOrDefault().Message);
+
+        }
+
+        [HttpGet("pagos/{numTarjeta}")]
+        public async Task<IActionResult> GetPagosByNumeroAsync(string numTarjeta)
+        {
+            Result<List<Transaccion>> result = await _unitOfWork.Transacciones.GetPagosByNumeroAsync(numTarjeta);
+
+            if (result.IsSuccess)
+            {
+                var transaccion = _mapper.Map<List<TransaccionDto>>(result.Value);
+                return Ok(transaccion);
+            }
+
+            return NotFound(result.Errors.FirstOrDefault().Message);
+
+        }
+
+        [HttpGet("compras/{numTarjeta}")]
+        public async Task<IActionResult> GetComprasByNumeroAsync(string numTarjeta)
+        {
+            Result<List<Transaccion>> result = await _unitOfWork.Transacciones.GetComprasByNumeroAsync(numTarjeta);
+
+            if (result.IsSuccess)
+            {
+                var transaccion = _mapper.Map<List<TransaccionDto>>(result.Value);
+                return Ok(transaccion);
+            }
+
+            return NotFound(result.Errors.FirstOrDefault().Message);
+
         }
     }
 }

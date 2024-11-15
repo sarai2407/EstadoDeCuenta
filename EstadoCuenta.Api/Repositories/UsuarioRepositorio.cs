@@ -2,6 +2,7 @@
 using EstadoCuenta.Api.Interfaces;
 using EstadoCuenta.Data;
 using EstadoCuenta.Data.Models;
+using FluentResults;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
@@ -51,6 +52,28 @@ namespace EstadoCuenta.Api.Repositories
 
         }
 
+        public async Task<Result<Usuario>> GetUsuarioByIdAsync(int id)
+        {
+            try
+            {
+                // Filtra todas las transacciones por el número de tarjeta
+                Usuario usuario = await _context.Usuarios
+                                 .FirstOrDefaultAsync(t => t.IdUsuario == id);
+
+                if (usuario == null)
+                {
+                    return Result.Fail("No se encontraron usuarios con el Id especificado.");
+                }
+
+                // Si no hay transacciones, retornamos una lista vacía
+                return Result.Ok(usuario);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail<Usuario>("Ocurrió un error al obtener el usuario.");
+            }
+
+        }
 
     }
 }

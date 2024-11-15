@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Página No Encontrada";
+    Layout = "_Layout";  
+}
+
+<div class="container text-center mt-5">
+    <h1 class="display-4 text-warning">404 - Página No Encontrada</h1>
+    <p class="lead">Lo sentimos, la página que estás buscando no existe o ha sido movida.</p>
+
+    <!-- Mostrar mensaje de error adicional si está disponible -->
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <p class="text-muted">@ViewBag.ErrorMessage</p>
+    }
+
+    <a href="/" class="btn btn-primary mt-3">Volver al Inicio</a>
+</div>

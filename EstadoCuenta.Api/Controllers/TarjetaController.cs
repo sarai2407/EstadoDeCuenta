@@ -2,6 +2,7 @@
 using EstadoCuenta.Api.DTOs;
 using EstadoCuenta.Api.Interfaces;
 using EstadoCuenta.Data.Models;
+using FluentResults;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,7 +21,7 @@ namespace EstadoCuenta.Api.Controllers
             _mapper = mapper;
         }
 
-        [HttpPost]
+        [HttpPost("CrearTarjeta")]
         public async Task<IActionResult> CrearTarjeta([FromBody]TarjetaDto tarjetaDto)
         {
             var tarjeta = _mapper.Map<Tarjeta>(tarjetaDto);
@@ -35,32 +36,33 @@ namespace EstadoCuenta.Api.Controllers
             return BadRequest(new { message = "Error al crear la tarjeta" });
         }
 
-        [HttpGet]
+        [HttpGet("GetTarjetaNum")]
         public async Task<IActionResult> GetTarjetaNum(string NumTarjeta)
         {
-            Tarjeta tarjeta =  await _unitOfWork.Tarjetas.GetTarjetaByNumeroAsync(NumTarjeta);
+            Result<Tarjeta> tarjeta =  await _unitOfWork.Tarjetas.GetTarjetaByNumeroAsync(NumTarjeta);
 
-            var result = _mapper.Map<TarjetaDto>(tarjeta);
-
-            if (result == null)
+            if (tarjeta.IsSuccess)
             {
-                return NotFound(new { Message = "Tarjeta no encontrada" });
+                var result = _mapper.Map<TarjetaDto>(tarjeta.Value);
+                return Ok(result);
             }
-            return Ok(result);
+
+            return NotFound(tarjeta.Errors.FirstOrDefault().Message);
         }
 
         [HttpGet("GetTarjetaVariables")]
         public async Task<IActionResult> GetTarjetaVariables(string NumTarjeta)
         {
-            Tarjeta tarjeta = await _unitOfWork.Tarjetas.GetTarjetaByNumeroAsync(NumTarjeta);
+            Result<Tarjeta> tarjeta = await _unitOfWork.Tarjetas.GetTarjetaByNumeroAsync(NumTarjeta);
 
-            var result = _mapper.Map<TarjetaVariablesDto>(tarjeta);
-
-            if (result == null)
+            if (tarjeta.IsSuccess)
             {
-                return NotFound(new { Message = "Tarjeta no encontrada" });
+                var result = _mapper.Map<TarjetaVariablesDto>(tarjeta.Value);
+                return Ok(result);
             }
-            return Ok(result);
+
+            return NotFound(tarjeta.Errors.FirstOrDefault().Message);
+
         }
     }
 }
