@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EstadoCuenta.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e843e0a7900840281d7c37ca57eefd418f8bf0d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e219588fc366c61aa67c0651c4dd0008365dd86e")]
 [assembly: System.Reflection.AssemblyProductAttribute("EstadoCuenta.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EstadoCuenta.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

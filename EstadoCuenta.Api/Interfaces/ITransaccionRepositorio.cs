@@ -7,6 +7,7 @@ namespace EstadoCuenta.Api.Interfaces
     {
         Task<int> CrearTransaccionAsync(Transaccion transaccion);
         Task<Result<List<Transaccion>>> GetTransaccionesByNumeroAsync(string numTarjeta);
+        Task<Result<List<Transaccion>>> GetTransaccionesByNumeroMesAsync(string numTarjeta);
         Task<Result<List<Transaccion>>> GetComprasByNumeroAsync(string numTarjeta);
         Task<Result<List<Transaccion>>> GetPagosByNumeroAsync(string numTarjeta);
     }

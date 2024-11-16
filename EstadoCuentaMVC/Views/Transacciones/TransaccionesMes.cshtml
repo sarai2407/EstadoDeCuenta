@@ -1,0 +1,45 @@
+﻿@model List<EstadoCuentaMVC.Models.TransaccionViewModel>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Transacciones del Mes</h2>
+
+    @if (Model != null && Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Monto</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Tipo Transacción</th>
+                    <th scope="col">Número de Tarjeta</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var transaccion in Model)
+                {
+                    <tr>
+                        <td>@transaccion.Monto</td>
+                        <td>@transaccion.Descripcion</td>
+                        <td>@transaccion.Fecha.ToString("dd/MM/yyyy")</td>
+                        <td>@transaccion.IdTipoTransaccion</td>
+                        <td>@transaccion.NumTarjeta</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No se encontraron transacciones para este número de tarjeta.</p>
+    }
+
+    <div class="mt-4">
+        <a asp-controller="Tarjeta" asp-action="DetalleTarjeta" asp-route-numTarjeta="@ViewData["NumTarjeta"]" class="btn btn-secondary">Regresar</a>
+    </div>
+
+    <div class="mt-4">
+        <a asp-controller="Transacciones" asp-action="TransaccionesAll" asp-route-numTarjeta="@ViewData["NumTarjeta"]" class="btn btn-primary">Ver Transacciones Completas</a>
+    </div>
+
+</div>

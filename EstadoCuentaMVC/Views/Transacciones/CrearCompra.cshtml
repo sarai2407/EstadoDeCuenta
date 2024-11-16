@@ -8,7 +8,7 @@
 
         <div class="mb-3">
             <label asp-for="Monto" class="form-label">Monto:</label>
-            <input asp-for="Monto" type="number" step="0.01" class="form-control" required />
+            <input asp-for="Monto" type="number" step="0.01" class="form-control" min="0.01" required />
             <div class="invalid-feedback">
                 Por favor, ingrese un monto válido.
             </div>
@@ -22,7 +22,38 @@
             </div>
         </div>
 
+        <div class="mb-3">
+            <label asp-for="Fecha" class="form-label">Fecha de la Compra:</label>
+            <input asp-for="Fecha" type="date" class="form-control" required />
+            <div class="invalid-feedback">
+                Por favor, ingrese una fecha válida.
+            </div>
+        </div>
+
         <button type="submit" class="btn btn-primary">Registrar Compra</button>
-        <a asp-action="DetallesTarjeta" class="btn btn-secondary">Cancelar</a>
+        <a asp-controller="Tarjeta" asp-action="DetalleTarjeta" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-secondary">Cancelar</a>
     </form>
 </div>
+
+@section Scripts {
+    <script>
+        // Habilitar la validación de Bootstrap para el formulario
+        (function () {
+            'use strict'
+            // Obtener todos los formularios a los que les vamos a aplicar la validación
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Iterar sobre cada formulario y evitar el envío si es inválido
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+}

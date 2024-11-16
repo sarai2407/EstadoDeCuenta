@@ -61,10 +61,25 @@ namespace EstadoCuenta.Api.Controllers
             return BadRequest(new { message = "Error al crear la transacción" });
         }
 
-        [HttpGet("transacciones/{numTarjeta}")]
+        [HttpGet("transaccionesAll")]
         public async Task<IActionResult> GetTransaccionesByNumeroAsync(string numTarjeta)
         {
             Result<List<Transaccion>> result = await _unitOfWork.Transacciones.GetTransaccionesByNumeroAsync(numTarjeta);
+
+            if (result.IsSuccess)
+            {
+                var transaccion = _mapper.Map<List<TransaccionDto>>(result.Value);
+                return Ok(transaccion);
+            }
+
+            return NotFound(result.Errors.FirstOrDefault().Message);
+
+        }
+
+        [HttpGet("transaccionesmes")]
+        public async Task<IActionResult> GetTransaccioneMesByNumeroAsync(string numTarjeta)
+        {
+            Result<List<Transaccion>> result = await _unitOfWork.Transacciones.GetTransaccionesByNumeroMesAsync(numTarjeta);
 
             if (result.IsSuccess)
             {

@@ -122,7 +122,7 @@
                 </div>
             </div>
 
-            <div class="row mt-4">
+            @* <div class="row -md-6">
                 <div class="col-md-6">
                     <a asp-action="CrearCompra" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-primary btn-block">
                         Registrar Compra
@@ -133,7 +133,25 @@
                         Registrar Pago
                     </a>
                 </div>
-            </div>
+                <div class="col-md-6">
+                    <a asp-action="TransaccionesMes" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-success btn-block">
+                        Ver Transacciones
+                    </a>
+                </div>
+            </div> *@
+
+        </div>
+
+        <div class="d-flex justify-content-between mt-4" width: 100%;">
+            <a asp-action="CrearCompra" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-primary flex-fill me-2">
+                Registrar Compra
+            </a>
+            <a asp-action="CrearPago" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-success flex-fill me-2">
+                Registrar Pago
+            </a>
+            <a asp-action="TransaccionesMes" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-info flex-fill">
+                Ver Transacciones
+            </a>
         </div>
     }
     else

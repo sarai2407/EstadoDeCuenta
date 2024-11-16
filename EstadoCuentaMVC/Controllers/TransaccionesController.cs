@@ -1,15 +1,23 @@
-﻿using EstadoCuentaMVC.Models;
+﻿using EstadoCuenta.Api.DTOs;
+using EstadoCuenta.Data.Models;
+using EstadoCuentaMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
+using Newtonsoft.Json;
+using AutoMapper;
 
 namespace EstadoCuentaMVC.Controllers
 {
     public class TransaccionesController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
+        private readonly IMapper _mapper;
 
-        public TransaccionesController(IHttpClientFactory httpClientFactory)
+        public TransaccionesController(IHttpClientFactory httpClientFactory, IMapper mapper)
         {
             _httpClientFactory = httpClientFactory;
+            _mapper = mapper;
+
         }
 
         // GET: Vista para registrar una compra
@@ -73,6 +81,64 @@ namespace EstadoCuentaMVC.Controllers
             ViewData["NumTarjeta"] = TempData["NumTarjeta"];
 
             return View(); // Renderiza una vista simple de confirmación
+        }
+
+
+        // Obtener las transacciones del mes por número de tarjeta
+        [HttpGet("TransaccionesMes")]
+        public async Task<IActionResult> TransaccionesMes(string numTarjeta)
+        {
+            // Hacer una solicitud GET al controlador de la API
+            var client = _httpClientFactory.CreateClient("APIClient");
+            var response = await client.GetAsync($"/api/Transaccion/transaccionesmes?numTarjeta={numTarjeta}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Obtener la respuesta y mapearla a un modelo de la vista usando AutoMapper
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var transaccionesDto = JsonConvert.DeserializeObject<List<TransaccionDto>>(jsonResponse);
+
+                // Usamos AutoMapper para mapear los objetos de TransaccionViewModel a TransaccionDto
+                var transaccionesViewModel = _mapper.Map<List<TransaccionViewModel>>(transaccionesDto);
+
+                TempData["NumTarjeta"] = numTarjeta;
+                ViewData["NumTarjeta"] = TempData["NumTarjeta"];
+
+                // Pasar la lista de transacciones a la vista
+                return View(transaccionesViewModel);
+            }
+
+            // Si no se encuentra, mostrar un error
+            ViewBag.ErrorMessage = "No se pudieron obtener las transacciones.";
+            return View("Error");
+        }
+
+        [HttpGet("TransaccionesAll")]
+        public async Task<IActionResult> TransaccionesAll(string numTarjeta)
+        {
+            // Hacer una solicitud GET al controlador de la API
+            var client = _httpClientFactory.CreateClient("APIClient");
+            var response = await client.GetAsync($"/api/Transaccion/transaccionesAll?numTarjeta={numTarjeta}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Obtener la respuesta y mapearla a un modelo de la vista usando AutoMapper
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var transaccionesDto = JsonConvert.DeserializeObject<List<TransaccionDto>>(jsonResponse);
+
+                // Usamos AutoMapper para mapear los objetos de TransaccionViewModel a TransaccionDto
+                var transaccionesViewModel = _mapper.Map<List<TransaccionViewModel>>(transaccionesDto);
+
+                TempData["NumTarjeta"] = numTarjeta;
+                ViewData["NumTarjeta"] = TempData["NumTarjeta"];
+
+                // Pasar la lista de transacciones a la vista
+                return View(transaccionesViewModel);
+            }
+
+            // Si no se encuentra, mostrar un error
+            ViewBag.ErrorMessage = "No se pudieron obtener las transacciones.";
+            return View("Error");
         }
     }
 }
