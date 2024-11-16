@@ -2,7 +2,7 @@
 {
     public class TransaccionViewModel
     {
-        public int IdTransaccion { get; set; }
+        //public int IdTransaccion { get; set; }
         public DateTime Fecha { get; set; }
         public decimal Monto { get; set; }
         public string Descripcion { get; set; }

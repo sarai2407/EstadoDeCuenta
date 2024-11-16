@@ -1,0 +1,6 @@
+﻿<div class="container mt-5 text-center">
+    <h2 class="text-success">¡Transacción registrada exitosamente!</h2>
+    <p>@TempData["SuccessMessage"]</p>
+    <a asp-controller="Tarjeta" asp-action="DetalleTarjeta" asp-route-numTarjeta="@ViewData["NumTarjeta"]" class="btn btn-primary mt-3">Volver a Detalles de la Tarjeta</a>
+</div>
+

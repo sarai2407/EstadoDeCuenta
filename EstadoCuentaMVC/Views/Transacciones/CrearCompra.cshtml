@@ -1,0 +1,28 @@
+﻿@model EstadoCuentaMVC.Models.TransaccionViewModel
+
+<div class="container mt-5">
+    <h2 class="mb-4">Registrar Compra</h2>
+    <form asp-action="Crear" method="post" class="needs-validation" novalidate>
+        <input type="hidden" asp-for="IdTipoTransaccion" />
+        <input type="hidden" asp-for="NumTarjeta" />
+
+        <div class="mb-3">
+            <label asp-for="Monto" class="form-label">Monto:</label>
+            <input asp-for="Monto" type="number" step="0.01" class="form-control" required />
+            <div class="invalid-feedback">
+                Por favor, ingrese un monto válido.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Descripcion" class="form-label">Descripción:</label>
+            <input asp-for="Descripcion" class="form-control" required />
+            <div class="invalid-feedback">
+                Por favor, ingrese una descripción.
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Registrar Compra</button>
+        <a asp-action="DetallesTarjeta" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

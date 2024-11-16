@@ -46,6 +46,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyamV0YVxEZXRhbGxlVGFyamV0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/Confirmacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xDb25maXJtYWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/CrearCompra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xDcmVhckNvbXByYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/CrearPago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xDcmVhclBhZ28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Usuario/Usuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xVc3Vhcmlvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

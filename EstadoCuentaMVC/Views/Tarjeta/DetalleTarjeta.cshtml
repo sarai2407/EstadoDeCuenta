@@ -121,6 +121,19 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <a asp-action="CrearCompra" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-primary btn-block">
+                        Registrar Compra
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a asp-action="CrearPago" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-success btn-block">
+                        Registrar Pago
+                    </a>
+                </div>
+            </div>
         </div>
     }
     else

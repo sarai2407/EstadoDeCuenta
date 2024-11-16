@@ -19,6 +19,10 @@ namespace EstadoCuentaMVC.Mapping
             CreateMap<UsuarioViewModel, UsuarioDto>();
             CreateMap<UsuarioDto, UsuarioViewModel>();
 
+            //transacciones
+            CreateMap<TransaccionDto,TransaccionViewModel>();
+            CreateMap<TransaccionViewModel,TransaccionDto>();
+
         }
     }
 }
