@@ -134,6 +134,37 @@
                 Ver Transacciones
             </a>
         </div>
+
+        <!-- Lista de compras realizadas -->
+        <div class="text-center mt-5">
+            <h3>Compras Mensuales</h3>
+            @if (Model.transacciones != null && Model.transacciones.Count > 0)
+            {
+                <table class="table table-striped mt-3">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Descripción</th>
+                            <th>Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var compra in Model.transacciones)
+                        {
+                            <tr>
+                                <td>@compra.Fecha.ToString("dd/MM/yyyy")</td>
+                                <td>@compra.Descripcion</td>
+                                <td>@compra.Monto.ToString("C")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No se encontraron compras realizadas de este mes.</p>
+            }
+        </div>
     }
     else
     {
