@@ -16,6 +16,7 @@ namespace EstadoCuenta.Data.Models
         public DateTime Fecha { get; set; }
         public decimal Monto { get; set; }
         public string Descripcion { get; set; }
+        public decimal? SaldoDisponible { get; set; }
 
         // Claves foráneas
         public int IdTipoTransaccion { get; set; }

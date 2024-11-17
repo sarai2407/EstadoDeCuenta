@@ -26,28 +26,30 @@ namespace EstadoCuenta.Api.Controllers
         {
             var transaccion = _mapper.Map<Transaccion>(transaccionDto);
 
+            decimal NuevoSaldo = 0;
+            var tarjeta = await _unitOfWork.Tarjetas.GetTarjetaByNumeroAsync(transaccionDto.NumTarjeta);
+            decimal saldoTarjeta = tarjeta.Value.Saldo;
+
+            switch (transaccionDto.IdTipoTransaccion)
+            {
+                case 1:
+                    NuevoSaldo = saldoTarjeta + transaccionDto.Monto;
+                    break;
+
+                case 2:
+                    NuevoSaldo = saldoTarjeta - transaccionDto.Monto;
+                    break;
+
+                default:
+                    throw new ArgumentException("Tipo de transacción desconocido.");
+            }
+            
+            transaccion.SaldoDisponible = tarjeta.Value.LimiteCredito - NuevoSaldo;
+
             var result = await _unitOfWork.Transacciones.CrearTransaccionAsync(transaccion);
 
             if (result > 0)
             {
-                decimal NuevoSaldo = 0;
-                var tarjeta = await _unitOfWork.Tarjetas.GetTarjetaByNumeroAsync(transaccionDto.NumTarjeta);
-                decimal saldoTarjeta = tarjeta.Value.Saldo;
-
-                switch (transaccionDto.IdTipoTransaccion)
-                {
-                    case 1:
-                        NuevoSaldo = saldoTarjeta + transaccionDto.Monto;
-                        break;
-
-                    case 2:
-                        NuevoSaldo = saldoTarjeta - transaccionDto.Monto;
-                        break;
-
-                    default:
-                        throw new ArgumentException("Tipo de transacción desconocido.");
-                }
-
                 var updateSaldoExitoso = await _unitOfWork.Tarjetas.UpdateSaldoTarjetaAsync(transaccionDto.NumTarjeta, NuevoSaldo);
 
                 if (updateSaldoExitoso)

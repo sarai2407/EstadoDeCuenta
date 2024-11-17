@@ -42,14 +42,55 @@ namespace EstadoCuentaMVC.Controllers
             {
                 var content = await response.Content.ReadAsStringAsync();
                 var tarjetaVariablesDto = JsonConvert.DeserializeObject<TarjetaVariablesDto>(content);
-
-                // Mapear el DTO a la ViewModel usando AutoMapper
                 var tarjetaVariablesViewModel = _mapper.Map<TarjetaVariablesViewModel>(tarjetaVariablesDto);
 
-                return View("DetalleTarjeta", tarjetaVariablesViewModel);
+                // Obtener los detalles del usuario asociado a la tarjeta
+                var userResponse = await client.GetAsync($"/api/Usuario/GetUser?id={tarjetaVariablesViewModel.IdUsuario}");
+                if (userResponse.IsSuccessStatusCode)
+                {
+                    var userContent = await userResponse.Content.ReadAsStringAsync();
+                    var usuarioDto = JsonConvert.DeserializeObject<UsuarioDto>(userContent);
+                    var usuarioViewModel = _mapper.Map<UsuarioViewModel>(usuarioDto);
+
+                    informacionViewModel infor = new informacionViewModel()
+                    {
+                        tarjetaVariables = tarjetaVariablesViewModel,
+                        usuarioinf = usuarioViewModel
+                    };
+
+                    return View("DetalleTarjeta", infor);
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = "No se encontró el usuario asociado a la tarjeta.";
+                    return View("DetalleTarjeta");
+                }
             }
 
             return NotFound("No se encontró la tarjeta especificada.");
+        }
+
+        [HttpGet("DescargarPdf")]
+        public async Task<IActionResult> DescargarPdf(string numTarjeta)
+        {
+            if (string.IsNullOrEmpty(numTarjeta))
+            {
+                // Si no se pasa el número de tarjeta, devolvemos un error
+                return BadRequest("El número de tarjeta es requerido.");
+            }
+
+            // Aquí deberías hacer la solicitud al servicio de la API para obtener el archivo PDF.
+            var client = _httpClientFactory.CreateClient("APIClient");
+            var response = await client.GetAsync($"/api/Pdf/DownloadFile?NumTarjeta={numTarjeta}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var fileBytes = await response.Content.ReadAsByteArrayAsync();
+                string fileName = $"{numTarjeta}_EstadoCuenta.pdf";
+                return File(fileBytes, "application/pdf", fileName);
+            }
+
+            return NotFound("No se pudo generar el PDF.");
         }
     }
 }

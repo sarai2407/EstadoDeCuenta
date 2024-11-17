@@ -28,25 +28,39 @@ namespace EstadoCuenta.Api.Repositories
                     new SqlParameter("@Monto", SqlDbType.Decimal) { Value = transaccion.Monto },
                     new SqlParameter("@Descripcion", SqlDbType.NVarChar) { Value = transaccion.Descripcion ?? (object)DBNull.Value },
                     new SqlParameter("@IdTipoTransaccion", SqlDbType.Int) { Value = transaccion.IdTipoTransaccion },
-                    new SqlParameter("@NumTarjeta", SqlDbType.NVarChar) { Value = transaccion.NumTarjeta ?? (object)DBNull.Value }
+                    new SqlParameter("@NumTarjeta", SqlDbType.NVarChar) { Value = transaccion.NumTarjeta ?? (object)DBNull.Value },
+                    new SqlParameter("@SaldoDisponible", SqlDbType.Decimal) { Value = transaccion.SaldoDisponible }
                 };
 
                 // Ejecutar el procedimiento almacenado
-                var result = await _context.Database.ExecuteSqlRawAsync("EXEC CrearTransaccion @Fecha, @Monto, @Descripcion, @IdTipoTransaccion, @NumTarjeta", parameters);
-                return result;
+                var result = await _context.Database.ExecuteSqlRawAsync(
+                    "EXEC CrearTransacciones @Fecha, @Monto, @Descripcion, @IdTipoTransaccion, @NumTarjeta, @SaldoDisponible",
+                    parameters);
+
+                // Verificar si la ejecución fue exitosa
+                if (result > 0)
+                {
+                    // Si la inserción fue exitosa, result debería ser el número de filas afectadas
+                    return result;
+                }
+                else
+                {
+                    // Si no se afectaron filas, podría indicar un problema con los datos o la ejecución
+                    Console.WriteLine("No se insertaron filas.");
+                    return 0; // Valor indicando que no hubo filas afectadas
+                }
             }
             catch (SqlException sqlEx)
             {
                 // Manejo de excepción específica para SQL
-                // Puedes registrar el error aquí o devolver un valor que indique un fallo
                 Console.WriteLine($"Error SQL: {sqlEx.Message}");
-                return -1; // Valor indicando que hubo un error
+                return -1; // Valor indicando que hubo un error SQL
             }
             catch (Exception ex)
             {
                 // Manejo de cualquier otra excepción
                 Console.WriteLine($"Error general: {ex.Message}");
-                return -1; // Valor indicando que hubo un error
+                return -1; // Valor indicando que hubo un error general
             }
         }
 

@@ -2,14 +2,11 @@
 {
     public class PdfEstadoDto
     {      
-        //public datosPersona datos {  get; set; }
-        //transaccion
         public DateTime Fecha { get; set; }
         public decimal Monto { get; set; }
         public string Descripcion { get; set; }
         public int IdTipoTransaccion { get; set; }
         public decimal SaldoDisponible { get; set; }
-        public decimal Saldo { get; set; }
     }
 
     public  class datosPersona

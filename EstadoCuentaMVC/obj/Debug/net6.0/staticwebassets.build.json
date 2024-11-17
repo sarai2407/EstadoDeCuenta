@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DOTDzv8fvYGrul49L4h67VmlyKfYqcm6Qxkb0Nwpo5M=",
+  "Hash": "MFLHlT3e60L5uk4NNPyB9swDUaqVrwdBeiFRl8cnduc=",
   "Source": "EstadoCuentaMVC",
   "BasePath": "_content/EstadoCuentaMVC",
   "Mode": "Default",
@@ -20,6 +20,13 @@
   ],
   "DiscoveryPatterns": [
     {
+      "Name": "EstadoCuenta.Api\\wwwroot",
+      "Source": "EstadoCuenta.Api",
+      "ContentRoot": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\wwwroot\\",
+      "BasePath": "_content/EstadoCuenta.Api",
+      "Pattern": "**"
+    },
+    {
       "Name": "EstadoCuentaMVC\\wwwroot",
       "Source": "EstadoCuentaMVC",
       "ContentRoot": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuentaMVC\\wwwroot\\",
@@ -28,6 +35,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\wwwroot\\templates\\EstadoCuenta.pdf",
+      "SourceId": "EstadoCuenta.Api",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\wwwroot\\",
+      "BasePath": "_content/EstadoCuenta.Api",
+      "RelativePath": "templates/EstadoCuenta.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\EstadoCuenta.pdf"
+    },
     {
       "Identity": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuentaMVC\\obj\\Debug\\net6.0\\scopedcss\\bundle\\EstadoCuentaMVC.styles.css",
       "SourceId": "EstadoCuentaMVC",

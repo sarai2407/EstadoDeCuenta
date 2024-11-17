@@ -1,11 +1,9 @@
-﻿@model EstadoCuentaMVC.Models.TarjetaVariablesViewModel
-
-@{
+﻿@{
     ViewData["Title"] = "Detalles de la Tarjeta";
 }
 
 <div class="container mt-5">
-    <h2>@ViewData["Title"]</h2>
+    <h2 class="text-center mb-4">@ViewData["Title"]</h2>
 
     <!-- Mostrar mensaje de error si existe -->
     @if (ViewBag.ErrorMessage != null)
@@ -15,28 +13,29 @@
         </div>
     }
 
-    @if (Model != null)
+    @if (Model != null && Model.tarjetaVariables != null && Model.usuarioinf != null)
     {
+        <!-- Mostrar el nombre y apellidos del usuario -->
+        <div class="d-flex justify-content-center mb-4">
+            <h4 class="display-5">@Model.usuarioinf.Nombre @Model.usuarioinf.Apellidos</h4>
+        </div>
+
+        <!-- Botón para descargar el PDF -->
+        <div class="d-flex justify-content-end mb-4">
+            <a asp-action="DescargarPdf" asp-controller="Tarjeta" asp-route-numTarjeta="@Model.tarjetaVariables.NumTarjeta" class="btn btn-warning">
+                Descargar Estado de Cuenta
+            </a>
+        </div>
+
         <!-- Información de la tarjeta -->
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 offset-md-2">
                 <div class="card">
                     <div class="card-header">
-                        <strong>Id de Tarjeta</strong>
+                        <strong>Número de Tarjeta</strong>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@Model.IdTarjeta</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
-                        <strong>Numero de Tarjeta</strong>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">@Model.NumTarjeta</p>
+                        <p class="card-text">@Model.tarjetaVariables.NumTarjeta</p>
                     </div>
                 </div>
             </div>
@@ -47,7 +46,7 @@
                         <strong>Límite de Crédito</strong>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@Model.LimiteCredito</p>
+                        <p class="card-text">@Model.tarjetaVariables.LimiteCredito</p>
                     </div>
                 </div>
             </div>
@@ -57,10 +56,10 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
-                        <strong>Saldo</strong>
+                        <strong>Saldo Actual</strong>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@Model.Saldo</p>
+                        <p class="card-text">@Model.tarjetaVariables.Saldo</p>
                     </div>
                 </div>
             </div>
@@ -71,7 +70,7 @@
                         <strong>Saldo Disponible</strong>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@Model.SaldoDisponible</p>
+                        <p class="card-text">@Model.tarjetaVariables.SaldoDisponible</p>
                     </div>
                 </div>
             </div>
@@ -82,7 +81,7 @@
                         <strong>Interés Bonificable</strong>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@Model.InteresBonificable</p>
+                        <p class="card-text">@Model.tarjetaVariables.InteresBonificable</p>
                     </div>
                 </div>
             </div>
@@ -95,7 +94,7 @@
                         <strong>Monto Total a Pagar</strong>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@Model.MontoTotalaPagar</p>
+                        <p class="card-text">@Model.tarjetaVariables.MontoTotalaPagar</p>
                     </div>
                 </div>
             </div>
@@ -106,7 +105,7 @@
                         <strong>Monto Total con Intereses</strong>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@Model.MontoTotalConIntereses</p>
+                        <p class="card-text">@Model.tarjetaVariables.MontoTotalConIntereses</p>
                     </div>
                 </div>
             </div>
@@ -117,39 +116,21 @@
                         <strong>Cuota Mínima a Pagar</strong>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">@Model.CuotaMinimaaPagar</p>
+                        <p class="card-text">@Model.tarjetaVariables.CuotaMinimaaPagar</p>
                     </div>
                 </div>
             </div>
-
-            @* <div class="row -md-6">
-                <div class="col-md-6">
-                    <a asp-action="CrearCompra" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-primary btn-block">
-                        Registrar Compra
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <a asp-action="CrearPago" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-success btn-block">
-                        Registrar Pago
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <a asp-action="TransaccionesMes" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-success btn-block">
-                        Ver Transacciones
-                    </a>
-                </div>
-            </div> *@
-
         </div>
 
-        <div class="d-flex justify-content-between mt-4" width: 100%;">
-            <a asp-action="CrearCompra" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-primary flex-fill me-2">
+        <!-- Botones de acciones -->
+        <div class="d-flex justify-content-between mt-4" style="width: 100%;">
+            <a asp-action="CrearCompra" asp-controller="Transacciones" asp-route-numTarjeta="@Model.tarjetaVariables.NumTarjeta" class="btn btn-primary flex-fill me-2">
                 Registrar Compra
             </a>
-            <a asp-action="CrearPago" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-success flex-fill me-2">
+            <a asp-action="CrearPago" asp-controller="Transacciones" asp-route-numTarjeta="@Model.tarjetaVariables.NumTarjeta" class="btn btn-success flex-fill me-2">
                 Registrar Pago
             </a>
-            <a asp-action="TransaccionesMes" asp-controller="Transacciones" asp-route-numTarjeta="@Model.NumTarjeta" class="btn btn-info flex-fill">
+            <a asp-action="TransaccionesMes" asp-controller="Transacciones" asp-route-numTarjeta="@Model.tarjetaVariables.NumTarjeta" class="btn btn-info flex-fill">
                 Ver Transacciones
             </a>
         </div>

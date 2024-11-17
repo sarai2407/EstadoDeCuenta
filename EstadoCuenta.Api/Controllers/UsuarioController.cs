@@ -39,7 +39,7 @@ namespace EstadoCuenta.Api.Controllers
             return BadRequest(new { message = "Error al crear el usuario" });
         }
 
-        [HttpGet("GetUser/{id}")]
+        [HttpGet("GetUser")]
         public async Task<IActionResult> GetUser(int id)
         {
             Result<Usuario> user = await _unitOfWork.Usuarios.GetUsuarioByIdAsync(id);

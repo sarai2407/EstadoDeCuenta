@@ -6,6 +6,7 @@ using EstadoCuenta.Api.Repositories;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using EstadoCuenta.Api.Middleware;
+using EstadoCuenta.Api.iTextSharp;
 
 
 
@@ -40,6 +41,7 @@ builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 builder.Services.AddScoped<ITarjetaRepositorio, TarjetaRepositorio>();
 builder.Services.AddScoped<ITransaccionRepositorio, TransaccionRepositorio>();
 builder.Services.AddScoped<ITipoTransaccionRepositorio, TipoTransaccionRepositorio>();
+builder.Services.AddScoped<IGenerarPdfs, GenerarPdfs>();
 
 
 #endregion

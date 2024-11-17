@@ -6,6 +6,7 @@
         ITarjetaRepositorio Tarjetas {  get; }
         ITransaccionRepositorio Transacciones { get; }
         ITipoTransaccionRepositorio TipoTransacciones { get; }
+        IGenerarPdfs generarPdfs { get; }
         Task<int> SaveAsync();
     }
 }

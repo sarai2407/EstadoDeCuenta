@@ -7,11 +7,14 @@ C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\Estad
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\EstadoCuenta.Api.pdb
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\FluentResults.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\Humanizer.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\itextsharp.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\itextsharp.xmlworker.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -86,6 +89,4 @@ C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\obj\Debug\net6.0\refin
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\obj\Debug\net6.0\EstadoCuenta.Api.pdb
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\obj\Debug\net6.0\EstadoCuenta.Api.genruntimeconfig.cache
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\obj\Debug\net6.0\ref\EstadoCuenta.Api.dll
-C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
-C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\itextsharp.dll
-C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\itextsharp.xmlworker.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\EstadoCuenta.Api.staticwebassets.runtime.json

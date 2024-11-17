@@ -11,11 +11,14 @@ C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Estado
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\EstadoCuentaMVC.pdb
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\FluentResults.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Humanizer.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\itextsharp.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\itextsharp.xmlworker.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\System.Net.Http.Formatting.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
@@ -99,6 +102,4 @@ C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\obj\Debug\net6.0\refint
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\obj\Debug\net6.0\EstadoCuentaMVC.pdb
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\obj\Debug\net6.0\EstadoCuentaMVC.genruntimeconfig.cache
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\obj\Debug\net6.0\ref\EstadoCuentaMVC.dll
-C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
-C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\itextsharp.dll
-C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\itextsharp.xmlworker.dll
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\bin\Debug\net6.0\EstadoCuenta.Api.staticwebassets.runtime.json

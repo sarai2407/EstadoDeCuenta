@@ -23,6 +23,9 @@ namespace EstadoCuenta.Api.Mapping
             CreateMap<TipoTransaccion, TipoTransaccionDto>();
             CreateMap<TipoTransaccionDto, TipoTransaccion>();
 
+            CreateMap<Transaccion, PdfEstadoDto>()
+            .ForMember(dest => dest.SaldoDisponible, opt => opt.MapFrom(src => src.SaldoDisponible.HasValue ? src.SaldoDisponible.Value : 0));
+
         }
     }
 }

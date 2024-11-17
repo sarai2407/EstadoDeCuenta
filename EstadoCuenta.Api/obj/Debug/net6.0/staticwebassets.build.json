@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "MP0+wVxdpAls07Z9sBm4t3HoEkkP2XDVjRGAaSFt4+k=",
+  "Hash": "Q789RLCAt3WVchRTnNyI2NF6CljukHsJRvNfU8Ua+s0=",
   "Source": "EstadoCuenta.Api",
   "BasePath": "_content/EstadoCuenta.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "EstadoCuenta.Api\\wwwroot",
+      "Source": "EstadoCuenta.Api",
+      "ContentRoot": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\wwwroot\\",
+      "BasePath": "_content/EstadoCuenta.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\wwwroot\\templates\\EstadoCuenta.pdf",
+      "SourceId": "EstadoCuenta.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\wwwroot\\",
+      "BasePath": "_content/EstadoCuenta.Api",
+      "RelativePath": "templates/EstadoCuenta.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\EstadoCuenta.pdf"
+    }
+  ]
 }
