@@ -178,5 +178,42 @@ namespace EstadoCuenta.Api.Repositories
             }
         }
 
+        public async Task<Result<(decimal totalMesActual, decimal totalMeses)>> GetSumaMontosUltimosMesesAsync(string numTarjeta)
+        {
+            try
+            {
+                // montos mes actual
+                var montosMesActual = await _context.Transacciones
+                    .Where(t => t.NumTarjeta == numTarjeta
+                            && t.IdTipoTransaccion == 1
+                            && t.Fecha.Month == DateTime.Now.Month
+                            && t.Fecha.Year == DateTime.Now.Year)
+                    .Select(t => t.Monto)
+                    .ToListAsync();
+
+                decimal totalMesActual = montosMesActual.Sum(); 
+
+                // montos mes anterior
+                var montosMesAnterior = await _context.Transacciones
+                    .Where(t => t.NumTarjeta == numTarjeta
+                            && t.IdTipoTransaccion == 1
+                            && t.Fecha.Month == DateTime.Now.AddMonths(-1).Month
+                            && t.Fecha.Year == DateTime.Now.AddMonths(-1).Year)
+                    .Select(t => t.Monto)
+                    .ToListAsync();
+
+                decimal totalMesAnterior = montosMesAnterior.Sum();
+
+                decimal totalMeses = totalMesActual + totalMesAnterior;
+
+                // tuple con los totales
+                return Result.Ok((totalMesActual, totalMeses));
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail<(decimal, decimal)>("Ocurrió un error al obtener los montos.");
+            }
+        }
+
     }
 }

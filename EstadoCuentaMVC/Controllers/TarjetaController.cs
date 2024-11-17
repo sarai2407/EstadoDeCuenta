@@ -73,6 +73,17 @@ namespace EstadoCuentaMVC.Controllers
                         transacciones = comprasViewModel
                     };
 
+                    //suma de montos
+                    var MontosResponse = await client.GetAsync($"/api/Transaccion/GetSumaMontos?numTarjeta={numTarjeta}");
+                    var MontosContent = await MontosResponse.Content.ReadAsStringAsync();
+                    var MontosResult = JsonConvert.DeserializeObject<dynamic>(MontosContent);
+
+                    var totalMesActual = MontosResult.totalMesActual;
+                    var totalMeses = MontosResult.totalMeses;
+
+                    ViewData["totalMesActual"] = totalMesActual;
+                    ViewData["totalMeses"] = totalMeses;
+
                     return View("DetalleTarjeta", infor);
                 }
                 else

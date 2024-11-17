@@ -48,7 +48,7 @@ namespace EstadoCuenta.Api.iTextSharp
             AcroFields fields = infor.AcroFields;
 
             fields.SetField("usuario", pdfEstado.Nombre + " " + pdfEstado.Apellidos);
-            fields.SetField("cuenta", pdfEstado.NumTarjeta);
+            fields.SetField("tarjeta", pdfEstado.NumTarjeta);
             fields.SetField("fechaDes", FechaFormatoddMMyyy(pdfEstado.FechaDescarga.ToString()));
 
             //recorrer transacciones list

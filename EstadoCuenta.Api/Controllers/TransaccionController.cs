@@ -137,5 +137,22 @@ namespace EstadoCuenta.Api.Controllers
             return NotFound(result.Errors.FirstOrDefault().Message);
 
         }
+
+        [HttpGet("GetSumaMontos")]
+        public async Task<IActionResult> GetSumaMontos(string numTarjeta)
+        {
+            // Llamada al repositorio para obtener la suma de los montos de ambos meses
+            var result = await _unitOfWork.Transacciones.GetSumaMontosUltimosMesesAsync(numTarjeta);
+
+            if (result.IsSuccess) 
+            {
+                return Ok(new
+                {
+                    TotalMesActual = result.Value.totalMesActual,
+                    TotalMeses = result.Value.totalMeses
+                });
+            }
+            return NotFound(result.Errors.FirstOrDefault().Message);
+        }
     }
 }

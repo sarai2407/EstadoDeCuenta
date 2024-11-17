@@ -11,5 +11,6 @@ namespace EstadoCuenta.Api.Interfaces
         Task<Result<List<Transaccion>>> GetComprasByNumeroAsync(string numTarjeta);
         Task<Result<List<Transaccion>>> GetComprasMesByNumeroAsync(string numTarjeta);
         Task<Result<List<Transaccion>>> GetPagosByNumeroAsync(string numTarjeta);
+        Task<Result<(decimal totalMesActual, decimal totalMeses)>> GetSumaMontosUltimosMesesAsync(string numTarjeta);
     }
 }
