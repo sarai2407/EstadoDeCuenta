@@ -52,10 +52,25 @@ namespace EstadoCuentaMVC.Controllers
                     var usuarioDto = JsonConvert.DeserializeObject<UsuarioDto>(userContent);
                     var usuarioViewModel = _mapper.Map<UsuarioViewModel>(usuarioDto);
 
+                    // Obtener compras del mes asociadas a la tarjeta
+                    var comprasResponse = await client.GetAsync($"/api/Transaccion/comprasMes?numTarjeta={numTarjeta}");
+                    List<TransaccionViewModel> comprasViewModel = new();
+                    if (comprasResponse.IsSuccessStatusCode)
+                    {
+                        var comprasContent = await comprasResponse.Content.ReadAsStringAsync();
+                        var comprasDto = JsonConvert.DeserializeObject<List<TransaccionDto>>(comprasContent);
+                        comprasViewModel = _mapper.Map<List<TransaccionViewModel>>(comprasDto);
+                    }
+                    else
+                    {
+                        ViewBag.WarningMessage = "No se encontraron compras realizadas este mes.";
+                    }
+
                     informacionViewModel infor = new informacionViewModel()
                     {
                         tarjetaVariables = tarjetaVariablesViewModel,
-                        usuarioinf = usuarioViewModel
+                        usuarioinf = usuarioViewModel,
+                        transacciones = comprasViewModel
                     };
 
                     return View("DetalleTarjeta", infor);

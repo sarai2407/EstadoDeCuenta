@@ -132,6 +132,30 @@ namespace EstadoCuenta.Api.Repositories
             }
         }
 
+        public async Task<Result<List<Transaccion>>> GetComprasMesByNumeroAsync(string numTarjeta)
+        {
+            try
+            {
+                // Filtra todas las transacciones por el número de tarjeta
+                List<Transaccion> transacciones = await _context.Transacciones
+                                                  .Where(t => t.NumTarjeta == numTarjeta && t.IdTipoTransaccion == 1 &&
+                                                t.Fecha.Month == DateTime.Now.Month &&
+                                                t.Fecha.Year == DateTime.Now.Year)
+                                                  .ToListAsync();
+                if (transacciones == null || !transacciones.Any())
+                {
+                    return Result.Fail<List<Transaccion>>("No se encontraron compras para el número de tarjeta especificado.");
+                }
+
+                // Si no hay transacciones, retornamos una lista vacía
+                return Result.Ok(transacciones);
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail<List<Transaccion>>("Ocurrió un error al obtener las compras.");
+            }
+        }
+
         public async Task<Result<List<Transaccion>>> GetPagosByNumeroAsync(string numTarjeta)
         {
             try

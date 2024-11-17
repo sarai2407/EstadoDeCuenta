@@ -108,10 +108,25 @@ namespace EstadoCuenta.Api.Controllers
 
         }
 
-        [HttpGet("compras/{numTarjeta}")]
+        [HttpGet("compras")]
         public async Task<IActionResult> GetComprasByNumeroAsync(string numTarjeta)
         {
             Result<List<Transaccion>> result = await _unitOfWork.Transacciones.GetComprasByNumeroAsync(numTarjeta);
+
+            if (result.IsSuccess)
+            {
+                var transaccion = _mapper.Map<List<TransaccionDto>>(result.Value);
+                return Ok(transaccion);
+            }
+
+            return NotFound(result.Errors.FirstOrDefault().Message);
+
+        }
+
+        [HttpGet("comprasMes")]
+        public async Task<IActionResult> GetComprasMesByNumeroAsync(string numTarjeta)
+        {
+            Result<List<Transaccion>> result = await _unitOfWork.Transacciones.GetComprasMesByNumeroAsync(numTarjeta);
 
             if (result.IsSuccess)
             {
