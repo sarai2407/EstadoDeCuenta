@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "No tienes transacciones";
+}
+
+@* Aquí usamos el sistema de grid de Bootstrap para centrar el contenido y hacerlo más responsivo *@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+    <div class="alert alert-info text-center" style="width: 100%; max-width: 600px;">
+        <h4 class="alert-heading">¡Ups!</h4>
+        <p class="mb-0">@ViewBag.Message</p>
+        <hr>
+        <a asp-controller="Tarjeta" asp-action="DetalleTarjeta" asp-route-numTarjeta="@TempData["NumTarjeta"]" class="btn btn-primary mt-3">Volver a Detalles de la Tarjeta</a>
+    </div>
+</div>

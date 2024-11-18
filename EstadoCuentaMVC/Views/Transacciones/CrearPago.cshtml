@@ -13,6 +13,13 @@
                 Por favor, ingrese un monto válido.
             </div>
         </div>
+        <div class="mb-3">
+            <label asp-for="Fecha" class="form-label">Fecha de la Compra:</label>
+            <input asp-for="Fecha" type="date" class="form-control" required />
+            <div class="invalid-feedback">
+                Por favor, ingrese una fecha válida.
+            </div>
+        </div>
 
         <input asp-for="Descripcion" type="hidden" />
 

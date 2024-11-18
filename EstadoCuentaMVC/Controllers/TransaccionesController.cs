@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using Newtonsoft.Json;
 using AutoMapper;
+using System.Net;
 
 namespace EstadoCuentaMVC.Controllers
 {
@@ -107,10 +108,22 @@ namespace EstadoCuentaMVC.Controllers
                 // Pasar la lista de transacciones a la vista
                 return View(transaccionesViewModel);
             }
+            else if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                TempData["NumTarjeta"] = numTarjeta;
+                ViewBag.Message = "Aún no tienes transacciones registradas.";
+                return View("NoTransacciones"); // Vista personalizada para cuando no hay transacciones
+            }
 
             // Si no se encuentra, mostrar un error
             ViewBag.ErrorMessage = "No se pudieron obtener las transacciones.";
             return View("Error");
+        }
+
+        [HttpGet]
+        public IActionResult NoTransacciones()
+        {
+            return View(); 
         }
 
         [HttpGet("TransaccionesAll")]

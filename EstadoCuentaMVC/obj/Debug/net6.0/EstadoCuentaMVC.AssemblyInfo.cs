@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EstadoCuentaMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca37f13805993fcb1174659540a952bcad7c3714")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad5bc08946b8621372c58fc34c3779579684cb3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EstadoCuentaMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EstadoCuentaMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
