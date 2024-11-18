@@ -7,6 +7,7 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using EstadoCuenta.Api.Middleware;
 using EstadoCuenta.Api.iTextSharp;
+using OfficeOpenXml;
 
 
 
@@ -24,7 +25,7 @@ builder.Services.AddCors(options =>
 });
 
 // Add services to the container.
-
+ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -20,12 +20,31 @@
             <h4 class="display-5">@Model.usuarioinf.Nombre @Model.usuarioinf.Apellidos</h4>
         </div>
 
-        <!-- Botón para descargar el PDF -->
+        <!-- Botón para descargar el PDF 
         <div class="d-flex justify-content-end mb-4">
             <a asp-action="DescargarPdf" asp-controller="Tarjeta" asp-route-numTarjeta="@Model.tarjetaVariables.NumTarjeta" class="btn btn-warning">
                 Descargar Estado de Cuenta
             </a>
+        </div>-->
+
+        <div class="d-flex justify-content-end mb-4">
+            <button onclick="descargarPdfYRedirigir('@Model.tarjetaVariables.NumTarjeta')" class="btn btn-warning">
+                Descargar Estado de Cuenta
+            </button>
         </div>
+
+        <script>
+            function descargarPdfYRedirigir(numTarjeta) {
+                // Abrir una nueva ventana para descargar el PDF
+                window.open(`/Tarjeta/DescargarPdf?numTarjeta=${numTarjeta}`, '_blank');
+
+                // Redirigir a la página de DetalleTarjeta después de la descarga
+                setTimeout(function () {
+                    window.location.href = `/Tarjeta/DetalleTarjeta?numTarjeta=${numTarjeta}`;
+                }, 1000);  // Se da tiempo para que la descarga comience
+            }
+        </script>
+
 
         <!-- Información de la tarjeta -->
         <div class="row">
@@ -136,6 +155,12 @@
         <!-- Lista de compras realizadas -->
         <div class="text-center mt-5">
             <h3>Compras Mensuales</h3>
+            <!--Botón para descargar el PDF-->
+            <div class="d-flex justify-content-end mb-4">
+                <a asp-action="DescargarExcel" asp-controller="Tarjeta" asp-route-numTarjeta="@Model.tarjetaVariables.NumTarjeta" class="btn btn-warning">
+                    Descargar excel de compras
+                </a>
+            </div>
             @if (Model.transacciones != null && Model.transacciones.Count > 0)
             {
                 <table class="table table-striped mt-3">

@@ -101,11 +101,8 @@ namespace EstadoCuentaMVC.Controllers
         {
             if (string.IsNullOrEmpty(numTarjeta))
             {
-                // Si no se pasa el número de tarjeta, devolvemos un error
                 return BadRequest("El número de tarjeta es requerido.");
             }
-
-            // Aquí deberías hacer la solicitud al servicio de la API para obtener el archivo PDF.
             var client = _httpClientFactory.CreateClient("APIClient");
             var response = await client.GetAsync($"/api/Pdf/DownloadFile?NumTarjeta={numTarjeta}");
 
@@ -117,6 +114,27 @@ namespace EstadoCuentaMVC.Controllers
             }
 
             return NotFound("No se pudo generar el PDF.");
+        }
+
+        [HttpGet("DescargarExcel")]
+        public async Task<IActionResult> DescargarExcel(string numTarjeta)
+        {
+            if (string.IsNullOrEmpty(numTarjeta))
+            {
+                return BadRequest("El número de tarjeta es requerido.");
+            }
+
+            var client = _httpClientFactory.CreateClient("APIClient");
+            var response = await client.GetAsync($"/api/Pdf/DownloadExcel?numTarjeta={numTarjeta}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var fileBytes = await response.Content.ReadAsByteArrayAsync();
+                string fileName = $"{numTarjeta}_Compras_{DateTime.Now:yyyyMMddHHmmss}.xlsx";
+                return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+            }
+
+            return NotFound("No se pudo generar el archivo Excel.");
         }
 
         [HttpGet("CrearTarjeta")]
