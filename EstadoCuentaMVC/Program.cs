@@ -8,6 +8,7 @@ builder.Services.AddHttpClient("APIClient", client =>
     client.BaseAddress = new Uri("https://localhost:7166"); // Cambia la URL al dominio de tu API
     client.DefaultRequestHeaders.Accept.Clear();
     client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+    client.Timeout = TimeSpan.FromSeconds(300);
 });
 
 // Configure AutoMapper
