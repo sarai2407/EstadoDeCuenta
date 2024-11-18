@@ -1,5 +1,6 @@
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\appsettings.json
+C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\EstadoCuenta.Api.staticwebassets.runtime.json
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\EstadoCuenta.Api.exe
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\EstadoCuenta.Api.deps.json
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\EstadoCuenta.Api.runtimeconfig.json
@@ -89,4 +90,3 @@ C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\obj\Debug\net6.0\refin
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\obj\Debug\net6.0\EstadoCuenta.Api.pdb
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\obj\Debug\net6.0\EstadoCuenta.Api.genruntimeconfig.cache
 C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\obj\Debug\net6.0\ref\EstadoCuenta.Api.dll
-C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuenta.Api\bin\Debug\net6.0\EstadoCuenta.Api.staticwebassets.runtime.json

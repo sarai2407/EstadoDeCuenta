@@ -18,7 +18,7 @@ namespace EstadoCuentaMVC.Controllers
             _mapper = mapper;
         }
 
-        // Acción para obtener la lista de usuarios
+        // obtener la lista de usuarios
         [HttpGet("Usuarios")]
         public async Task<IActionResult> Usuarios()
         {
@@ -39,7 +39,7 @@ namespace EstadoCuentaMVC.Controllers
             return NotFound("No se encontraron usuarios.");
         }
 
-        // Acción para obtener la tarjeta de un usuario específico
+        //obtener la tarjeta de un usuario específico
         [HttpGet("DetalleidTarjeta")]
         public async Task<IActionResult> DetalleidTarjeta(int idUsuario)
         {
@@ -58,6 +58,38 @@ namespace EstadoCuentaMVC.Controllers
             }
 
             return RedirectToAction("DetalleTarjeta", "Tarjeta", new { numTarjeta = "null1" });
+        }
+
+        [HttpGet("CrearUsuario")]
+        public IActionResult CrearUsuario()
+        {
+            // Retorna la vista para crear un usuario
+            return View(new UsuarioViewModel());
+        }
+
+        [HttpPost("CrearUsuario")]
+        public async Task<IActionResult> CrearUsuario(UsuarioViewModel usuarioViewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(usuarioViewModel);
+            }
+
+            var client = _httpClientFactory.CreateClient("APIClient");
+
+            // Mapear ViewModel a DTO
+            var usuarioDto = _mapper.Map<UsuarioDto>(usuarioViewModel);
+            usuarioDto.FechaRegistro = DateTime.Now; // Agregar la fecha actual al DTO
+
+            var response = await client.PostAsJsonAsync("/api/Usuario/CrearUsuario", usuarioDto);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("CrearTarjeta", "Tarjeta", new { idUsuario = usuarioDto.IdUsuario });
+            }
+
+            ViewBag.Error = "Ocurrió un error al crear el usuario.";
+            return View(usuarioViewModel);
         }
     }
 }
