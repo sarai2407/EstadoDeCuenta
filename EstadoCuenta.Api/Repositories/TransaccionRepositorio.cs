@@ -71,6 +71,7 @@ namespace EstadoCuenta.Api.Repositories
                 // Filtra todas las transacciones por el número de tarjeta
                 List<Transaccion> transacciones = await _context.Transacciones
                                                   .Where(t => t.NumTarjeta == numTarjeta)
+                                                  .OrderByDescending(t => t.Fecha)
                                                   .ToListAsync();
                 if (transacciones == null || !transacciones.Any())
                 {
@@ -95,6 +96,7 @@ namespace EstadoCuenta.Api.Repositories
                                                   .Where(t => t.NumTarjeta == numTarjeta &&
                                                 t.Fecha.Month == DateTime.Now.Month &&
                                                 t.Fecha.Year == DateTime.Now.Year)
+                                                  .OrderByDescending(t => t.Fecha)
                                                   .ToListAsync();
                 if (transacciones == null || !transacciones.Any())
                 {
@@ -117,6 +119,7 @@ namespace EstadoCuenta.Api.Repositories
                 // Filtra todas las transacciones por el número de tarjeta
                 List<Transaccion> transacciones = await _context.Transacciones
                                                   .Where(t => t.NumTarjeta == numTarjeta && t.IdTipoTransaccion == 1)
+                                                  .OrderByDescending(t => t.Fecha)
                                                   .ToListAsync();
                 if (transacciones == null || !transacciones.Any())
                 {
@@ -141,6 +144,7 @@ namespace EstadoCuenta.Api.Repositories
                                                   .Where(t => t.NumTarjeta == numTarjeta && t.IdTipoTransaccion == 1 &&
                                                 t.Fecha.Month == DateTime.Now.Month &&
                                                 t.Fecha.Year == DateTime.Now.Year)
+                                                  .OrderByDescending(t => t.Fecha)
                                                   .ToListAsync();
                 if (transacciones == null || !transacciones.Any())
                 {
@@ -163,6 +167,7 @@ namespace EstadoCuenta.Api.Repositories
                 // Filtra todas las transacciones por el número de tarjeta
                 List<Transaccion> transacciones = await _context.Transacciones
                                                   .Where(t => t.NumTarjeta == numTarjeta && t.IdTipoTransaccion == 2)
+                                                  .OrderByDescending(t => t.Fecha)
                                                   .ToListAsync();
                 if (transacciones == null || !transacciones.Any())
                 {
