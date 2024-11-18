@@ -57,7 +57,7 @@ builder.Services.AddHealthChecks()
 
 var app = builder.Build();
 
-/*  Descomentar para crear la Base de datos con sus tablas 
+/*  Descomentar para crear las tablas de la base de datos EstadoCuentaDB
 using (var scope = app.Services.CreateScope())
 {
     var Context = scope.ServiceProvider.GetRequiredService<EstadoCuentaContext>();
