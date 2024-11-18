@@ -1,0 +1,481 @@
+{
+	"info": {
+		"_postman_id": "f7acd7c2-826e-4e53-b1f1-37466fe2d763",
+		"name": "API Estado de Cuenta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26998420"
+	},
+	"item": [
+		{
+			"name": "DescargarPdf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7166/api/Pdf/DownloadFile?NumTarjeta=2356897545851245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Pdf",
+						"DownloadFile"
+					],
+					"query": [
+						{
+							"key": "NumTarjeta",
+							"value": "2356897545851245"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DescargarExcel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Pdf/DownloadExcel?numTarjeta=2356897545851245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Pdf",
+						"DownloadExcel"
+					],
+					"query": [
+						{
+							"key": "numTarjeta",
+							"value": "2356897545851245"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearTiposdeTransacciones",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idTipoTransaccion\": 1,\r\n  \"tipoDeTransaccion\": \"Compras\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7166/api/TipoTransaccion",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"TipoTransaccion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"dinora\",\r\n  \"apellidos\": \"garcia\",\r\n  \"telefono\": \"23567894\",\r\n  \"email\": \"dg@gmail.com\",\r\n  \"dui\": \"22555588-9\",\r\n  \"fechaRegistro\": \"2024-11-18T11:16:08.920Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7166/api/Usuario/CrearUsuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Usuario",
+						"CrearUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearTarjeta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"numTarjeta\": \"1265489756441256\",\r\n  \"limiteCredito\": 2000,\r\n  \"saldo\": 0,\r\n  \"saldoDisponible\": 2000,\r\n  \"idUsuario\": 22 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7166/api/Tarjeta/CrearTarjeta",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Tarjeta",
+						"CrearTarjeta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsuarios_Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Usuario/GetUser?id=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Usuario",
+						"GetUser"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsuarios_All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Usuario/GetUsers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Usuario",
+						"GetUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTarjeta_Por_NumTarjeta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Tarjeta/GetTarjetaNum?NumTarjeta=2356897545851245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Tarjeta",
+						"GetTarjetaNum"
+					],
+					"query": [
+						{
+							"key": "NumTarjeta",
+							"value": "2356897545851245"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTarjeta_Por_IdUsuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Tarjeta/GetTarjetaIdUser?idUser=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Tarjeta",
+						"GetTarjetaIdUser"
+					],
+					"query": [
+						{
+							"key": "idUser",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_DatosTarjeta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Tarjeta/GetTarjetaVariables?NumTarjeta=2356897545851245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Tarjeta",
+						"GetTarjetaVariables"
+					],
+					"query": [
+						{
+							"key": "NumTarjeta",
+							"value": "2356897545851245"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearTransaccion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fecha\": \"2024-11-18T11:28:45.921Z\",\r\n  \"monto\": 70,\r\n  \"descripcion\": \"Zara\",\r\n  \"idTipoTransaccion\": 1,\r\n  \"numTarjeta\": \"2356897545851245\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7166/api/Transaccion/CrearTransaccion",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Transaccion",
+						"CrearTransaccion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTodasLasTransacciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Transaccion/transaccionesAll?numTarjeta=2356897545851245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Transaccion",
+						"transaccionesAll"
+					],
+					"query": [
+						{
+							"key": "numTarjeta",
+							"value": "2356897545851245"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_TransaccionesMes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Transaccion/transaccionesmes?numTarjeta=2356897545851245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Transaccion",
+						"transaccionesmes"
+					],
+					"query": [
+						{
+							"key": "numTarjeta",
+							"value": "2356897545851245"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllPagos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Transaccion/pagos/2356897545851245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Transaccion",
+						"pagos",
+						"2356897545851245"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetALLCompras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Transaccion/compras?numTarjeta=2356897545851245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Transaccion",
+						"compras"
+					],
+					"query": [
+						{
+							"key": "numTarjeta",
+							"value": "2356897545851245"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComprasMesActual",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Transaccion/comprasMes?numTarjeta=2356897545851245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Transaccion",
+						"comprasMes"
+					],
+					"query": [
+						{
+							"key": "numTarjeta",
+							"value": "2356897545851245"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSum_Compras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7166/api/Transaccion/GetSumaMontos?numTarjeta=2356897545851245",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7166",
+					"path": [
+						"api",
+						"Transaccion",
+						"GetSumaMontos"
+					],
+					"query": [
+						{
+							"key": "numTarjeta",
+							"value": "2356897545851245"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
