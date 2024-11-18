@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuentaMVC\\EstadoCuentaMVC.csproj": {}
+    "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuentaMVC\\EstadoCuentaMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\EstadoCuenta.Api.csproj": {
+    "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Api\\EstadoCuenta.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\EstadoCuenta.Api.csproj",
+        "projectUniqueName": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Api\\EstadoCuenta.Api.csproj",
         "projectName": "EstadoCuenta.Api",
-        "projectPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\EstadoCuenta.Api.csproj",
+        "projectPath": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Api\\EstadoCuenta.Api.csproj",
         "packagesPath": "C:\\Users\\C00ki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\obj\\",
+        "outputPath": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj": {
-                "projectPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj"
+              "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj": {
+                "projectPath": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj"
               }
             }
           }
@@ -138,14 +138,14 @@
         }
       }
     },
-    "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj": {
+    "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj",
+        "projectUniqueName": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj",
         "projectName": "EstadoCuenta.Data",
-        "projectPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj",
+        "projectPath": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj",
         "packagesPath": "C:\\Users\\C00ki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\obj\\",
+        "outputPath": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -237,14 +237,14 @@
         }
       }
     },
-    "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuentaMVC\\EstadoCuentaMVC.csproj": {
+    "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuentaMVC\\EstadoCuentaMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuentaMVC\\EstadoCuentaMVC.csproj",
+        "projectUniqueName": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuentaMVC\\EstadoCuentaMVC.csproj",
         "projectName": "EstadoCuentaMVC",
-        "projectPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuentaMVC\\EstadoCuentaMVC.csproj",
+        "projectPath": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuentaMVC\\EstadoCuentaMVC.csproj",
         "packagesPath": "C:\\Users\\C00ki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuentaMVC\\obj\\",
+        "outputPath": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuentaMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -266,11 +266,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\EstadoCuenta.Api.csproj": {
-                "projectPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Api\\EstadoCuenta.Api.csproj"
+              "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Api\\EstadoCuenta.Api.csproj": {
+                "projectPath": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Api\\EstadoCuenta.Api.csproj"
               },
-              "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj": {
-                "projectPath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj"
+              "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj": {
+                "projectPath": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj"
               }
             }
           }

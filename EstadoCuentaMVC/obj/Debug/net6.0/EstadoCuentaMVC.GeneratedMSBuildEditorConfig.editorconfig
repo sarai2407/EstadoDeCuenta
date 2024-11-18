@@ -9,91 +9,91 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EstadoCuentaMVC
 build_property.RootNamespace = EstadoCuentaMVC
-build_property.ProjectDir = C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC\
+build_property.ProjectDir = D:\proyectos  c#\EstadoCuenta\EstadoCuentaMVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\C00ki\source\repos\EstadoCuenta\EstadoCuentaMVC
+build_property.MSBuildProjectDirectory = D:\proyectos  c#\EstadoCuenta\EstadoCuentaMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Error/GeneralError.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Error/GeneralError.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcR2VuZXJhbEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Error/NotFound.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Error/NotFound.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcTm90Rm91bmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Home/Index.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Home/Privacy.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Shared/Error.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Tarjeta/CrearTarjeta.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Tarjeta/CrearTarjeta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyamV0YVxDcmVhclRhcmpldGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Tarjeta/DetalleTarjeta.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Tarjeta/DetalleTarjeta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyamV0YVxEZXRhbGxlVGFyamV0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Tarjeta/TarjetaCreada.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Tarjeta/TarjetaCreada.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyamV0YVxUYXJqZXRhQ3JlYWRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/Confirmacion.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/Confirmacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xDb25maXJtYWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/CrearCompra.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/CrearCompra.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xDcmVhckNvbXByYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/CrearPago.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/CrearPago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xDcmVhclBhZ28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/NoTransacciones.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/NoTransacciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xOb1RyYW5zYWNjaW9uZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/TransaccionesAll.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/TransaccionesAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xUcmFuc2FjY2lvbmVzQWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/TransaccionesMes.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Transacciones/TransaccionesMes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNhY2Npb25lc1xUcmFuc2FjY2lvbmVzTWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Usuario/CrearUsuario.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Usuario/CrearUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhclVzdWFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Usuario/Usuarios.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Usuario/Usuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xVc3Vhcmlvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/_ViewImports.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/_ViewStart.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/C00ki/source/repos/EstadoCuenta/EstadoCuentaMVC/Views/Shared/_Layout.cshtml]
+[D:/proyectos  c\#/EstadoCuenta/EstadoCuentaMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zcleg12ll3

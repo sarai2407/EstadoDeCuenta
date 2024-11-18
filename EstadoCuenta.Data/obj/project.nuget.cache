@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GZjPKi4K9y0=",
+  "dgSpecHash": "Y/GJxyP3bDQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\C00ki\\source\\repos\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj",
+  "projectFilePath": "D:\\proyectos  c#\\EstadoCuenta\\EstadoCuenta.Data\\EstadoCuenta.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\C00ki\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\C00ki\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
