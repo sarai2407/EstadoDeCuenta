@@ -1,0 +1,10 @@
+﻿<div class="container mt-5">
+    <h3 class="text-center text-success">¡Tarjeta creada exitosamente!</h3>
+    <p class="text-center">Ahora puede utilizar la tarjeta asociada al usuario.</p>
+    <div class="text-center mt-4">
+        <a href="/Usuario/Usuarios" class="btn btn-primary">Volver a la lista de usuarios</a>
+    </div>
+    <div class="text-center mt-4">
+        <a asp-controller="Tarjeta" asp-action="DetalleTarjeta" asp-route-numTarjeta="@ViewData["NumTarjeta"]" class="btn btn-primary mt-3">Ver Detalles de esta Tarjeta</a>
+    </div>
+</div>

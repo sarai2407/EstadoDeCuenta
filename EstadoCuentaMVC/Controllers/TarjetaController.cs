@@ -118,5 +118,49 @@ namespace EstadoCuentaMVC.Controllers
 
             return NotFound("No se pudo generar el PDF.");
         }
+
+        [HttpGet("CrearTarjeta")]
+        public IActionResult CrearTarjeta(int idUsuario)
+        {
+            TarjetaViewModel tarjetaViewModel = new TarjetaViewModel()
+            {
+                IdUsuario = idUsuario
+            };
+
+            return View(tarjetaViewModel);
+        }
+
+        [HttpPost("CrearTarjetas")]
+        public async Task<IActionResult> CrearTarjeta(TarjetaViewModel tarjetaViewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(tarjetaViewModel);
+            }
+
+            var client = _httpClientFactory.CreateClient("APIClient");
+
+            // Mapear ViewModel a DTO
+            var tarjetaDto = _mapper.Map<TarjetaDto>(tarjetaViewModel);
+
+            var response = await client.PostAsJsonAsync("/api/Tarjeta/CrearTarjeta", tarjetaDto);
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["NumTarjeta"] = tarjetaViewModel.NumTarjeta;
+                return RedirectToAction("TarjetaCreada");
+            }
+
+            ViewBag.Error = "Ocurrió un error al crear la tarjeta.";
+            return View(tarjetaViewModel);
+        }
+
+        [HttpGet("TarjetaCreada")]
+        public IActionResult TarjetaCreada()
+        {
+            // Recupera el número de tarjeta desde TempData
+            ViewData["NumTarjeta"] = TempData["NumTarjeta"];
+            return View();
+        }
     }
 }

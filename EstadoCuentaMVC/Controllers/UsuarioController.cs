@@ -67,8 +67,8 @@ namespace EstadoCuentaMVC.Controllers
             return View(new UsuarioViewModel());
         }
 
-        [HttpPost("CrearUsuario")]
-        public async Task<IActionResult> CrearUsuario(UsuarioViewModel usuarioViewModel)
+        [HttpPost("CrearUsuarios")]
+        public async Task<IActionResult> CrearUsuarios(UsuarioViewModel usuarioViewModel)
         {
             if (!ModelState.IsValid)
             {
@@ -85,7 +85,13 @@ namespace EstadoCuentaMVC.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-                return RedirectToAction("CrearTarjeta", "Tarjeta", new { idUsuario = usuarioDto.IdUsuario });
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var Result = JsonConvert.DeserializeObject<dynamic>(responseContent);
+
+                var IdUsuario = Result.idUser;
+
+                //return RedirectToAction("CrearTarjeta", "Tarjeta", new { idUsuario = IdUsuario });
+                return Redirect("https://localhost:7032/Tarjeta/CrearTarjeta?idUsuario=" + IdUsuario);
             }
 
             ViewBag.Error = "Ocurrió un error al crear el usuario.";

@@ -10,4 +10,7 @@ BEGIN
 
     INSERT INTO Usuario (Nombre, Apellidos, Telefono, Email, Dui, FechaRegistro)
     VALUES (@Nombre, @Apellidos, @Telefono, @Email, @Dui, @FechaRegistro);
+
+    -- Devuelve el ID del nuevo usuario insertado
+    SELECT SCOPE_IDENTITY() AS idUser;
 END;

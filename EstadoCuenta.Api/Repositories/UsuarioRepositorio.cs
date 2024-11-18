@@ -34,7 +34,13 @@ namespace EstadoCuenta.Api.Repositories
 
                 // Ejecutar el procedimiento almacenado
                 var result = await _context.Database.ExecuteSqlRawAsync("EXEC CrearUsuario @Nombre, @Apellidos, @Telefono, @Email, @Dui, @FechaRegistro", parameters);
-                return result;
+
+                var idUser = await _context.Usuarios
+                                    .Where(u => u.Dui == usuario.Dui)  // O cualquier otro campo único
+                                    .Select(u => u.IdUsuario)
+                                    .FirstOrDefaultAsync();
+
+                return idUser;
             }
             catch (SqlException sqlEx)
             {

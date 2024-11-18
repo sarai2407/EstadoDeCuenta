@@ -33,7 +33,7 @@ namespace EstadoCuenta.Api.Controllers
 
             if (result > 0)
             {
-                return Ok(new { message = "Usuario creado exitosamente" });
+                return Ok(new { message = "Usuario creado exitosamente", idUser = result });
             }
 
             return BadRequest(new { message = "Error al crear el usuario" });

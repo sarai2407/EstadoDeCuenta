@@ -6,7 +6,7 @@
     {
         <div class="alert alert-danger">@ViewBag.Error</div>
     }
-    <form asp-action="CrearUsuario" method="post" class="mt-4">
+    <form asp-action="CrearUsuarios" asp-controller="Usuario" method="post" class="mt-4">
         <div class="form-group">
             <label for="Nombre">Nombres</label>
             <input type="text" class="form-control" id="Nombre" name="Nombre" asp-for="Nombre" required />

@@ -1,8 +1,31 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4">Bienvenido al sitio Estado de Cuentas</h1>
+        <p class="lead mt-3">Gestiona tus usuarios y sus tarjetas fácilmente.</p>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-4">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5 class="card-title">¿Ya tienes usuarios creados?</h5>
+                    <p class="card-text">Consulta la lista de usuarios y gestiona sus tarjetas.</p>
+                    <a href="https://localhost:7032/Usuario/Usuarios" class="btn btn-primary btn-block">Ver Usuarios</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5 class="card-title">¿Aún no tienes usuarios creados?</h5>
+                    <p class="card-text">Crea un nuevo usuario para comenzar a gestiona sus tarjetas.</p>
+                    <a href="https://localhost:7032/Usuario/CrearUsuario" class="btn btn-success btn-block">Crear Usuario</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
